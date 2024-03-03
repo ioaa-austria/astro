@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Informationen on IOAA–Austria</title>
+    <link>http://localhost:1313/astro/informationen/</link>
+    <description>Recent content in Informationen on IOAA–Austria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/astro/informationen/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ablauf</title>
+      <link>http://localhost:1313/astro/informationen/ablauf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/astro/informationen/ablauf/</guid>
+      <description>Die Auswahl findet in zwei Stufen statt: Zunächst bekommen Schüler*innen aus Schulen in ganz Österreich die Möglichkeit bei der etwa einmonatigen Hausaufgabenrunde gestellte Problemstellungen zu bearbeiten. Erfolgreiche Einsendungen werden bewertet und die besten, maximal 20 Einsendungen, erhalten eine Einladung zum Bundeswettbewerb. Bei einer erfolgreichen Teilnahme am Physikolympiade Bundeswettbewerb 1, dürfen Teilehmer dieses Wettbewerbs auch direkt an der Bundesrunde der IOAA-Austria teilnehmen. Hier messen sich die besten österreichischen Astronomen und Astrophysiker bei einer mehrstündigen Onlineklausur.</description>
+    </item>
+    <item>
+      <title>Lernmaterialien</title>
+      <link>http://localhost:1313/astro/informationen/lernmaterialien/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/astro/informationen/lernmaterialien/</guid>
+      <description>Die österreichische Olympiade richtet sich nach internationalem Vorbild. Die wichtigsten Lernmaterialien finden sich auf Astro Sandbox (extern). Außerdem lassen sich einige Altklausuren auf der Seite des internationalen Bewerbs (extern) finden.</description>
+    </item>
+    <item>
+      <title>Regeln</title>
+      <link>http://localhost:1313/astro/informationen/regeln/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/astro/informationen/regeln/</guid>
+      <description>Die Teilnahme ist allen, im Wettbewerbsjahr an einer Österreichischen Schule, in der Oberstufe eingeschriebenen Schüler*innen gestattet, die zum 1. Juli des Jahres noch jünger als 20 sind. Insbesondere können also auch Schüler*innen im Maturajahrgang teilnehmen. Staatsbürgerschaft ist für die Teilnahme nicht ausschlaggebend. Auch Schüler*innen an Österreichischen Auslandsschulen können teilnehmen.&#xA;Die Aufgaben in jeder Runde (inklusive der Hausaufgabenrunde) sollen alleine bearbeitet werden. Bei der Hausaufgabenrunde dürfen aber alle sonstigen Hilfsmittel zu Rat gezogen werden, bei der Bundesrunde allerdings nur der eigene, nicht programmierbare Taschenrechner.</description>
+    </item>
+    <item>
+      <title>Syllabus</title>
+      <link>http://localhost:1313/astro/informationen/sylabus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/astro/informationen/sylabus/</guid>
+      <description>Unter Bearbeitung.&#xA;Währenddessen: Internationaler Syllabus (extern).</description>
+    </item>
+  </channel>
+</rss>
