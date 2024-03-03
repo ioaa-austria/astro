@@ -5,17 +5,15 @@
     <link>https://ioaa-austria.github.io/astro/news/</link>
     <description>Recent content in News on IOAA–Austria</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate><atom:link href="https://ioaa-austria.github.io/astro/news/index.xml" rel="self" type="application/rss+xml" />
+    <language>de</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ioaa-austria.github.io/astro/news/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Unsere Teilnahme an der IOAA–2023</title>
+      <title>Wir bei der IOAA–2023</title>
       <link>https://ioaa-austria.github.io/astro/news/ioaa_2023/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://ioaa-austria.github.io/astro/news/ioaa_2023/</guid>
-      <description>Dieses Jahr nahm Österreich zum ersten Mal an der Internationalen Astronomie- und Astrophysik-Olympiade (IOAA) teil! Die Teilnahme an der 16th „International Olypmiad on Astronomy and Astrophysics“ 2023 wurde von Schülern aus Niederösterreich mithilfe der Niederösterreichischen Science Academy organisiert.
-Vier Schüler (Taylan Algan, Elias Koschier, Thomas Riedle und Vincent Willis) in Begleitung von ihrem Team Leader (Miro Joensuu) fuhren gemeinsam nach Chorzów in Polen, um ihr Können auf die Probe zu stellen.</description>
+      <description>In 2023 nahm Österreich zum ersten Mal an der Internationalen Astronomie- und Astrophysik-Olympiade (IOAA) teil. Die Teilnahme an der 16th „International Olypmiad on Astronomy and Astrophysics“ 2023 wurde von Schülern aus Niederösterreich mithilfe der Niederösterreichischen Science Academy organisiert.&#xA;Vier Schüler (Taylan Algan, Elias Koschier, Thomas Riedle und Vincent Willis) in Begleitung von ihrem Team Leader (Miro Joensuu) fuhren gemeinsam nach Chorzów in Polen, um ihr Können auf die Probe zu stellen.</description>
     </item>
-    
   </channel>
 </rss>
