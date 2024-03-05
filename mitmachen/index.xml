@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mitmachen on IOAA–Austria</title>
-    <link>https://ioaa-austria.github.io/astro/mitmachen/</link>
+    <link>https://ioaa-austria.at/mitmachen/</link>
     <description>Recent content in Mitmachen on IOAA–Austria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <atom:link href="https://ioaa-austria.github.io/astro/mitmachen/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ioaa-austria.at/mitmachen/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

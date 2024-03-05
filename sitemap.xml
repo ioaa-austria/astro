@@ -2,54 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ioaa-austria.github.io/astro/informationen/</loc>
+    <loc>https://ioaa-austria.at/informationen/</loc>
     <lastmod>2023-09-08T14:10:49+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ioaa-austria.github.io/astro/mitmachen/</loc>
+    <loc>https://ioaa-austria.at/mitmachen/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ioaa-austria.github.io/astro/news/</loc>
+    <loc>https://ioaa-austria.at/news/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ioaa-austria.github.io/astro/kontakt/</loc>
+    <loc>https://ioaa-austria.at/kontakt/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ioaa-austria.github.io/astro/</loc>
+    <loc>https://ioaa-austria.at/</loc>
     <lastmod>2023-09-08T14:10:49+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ioaa-austria.github.io/astro/informationen/ablauf/</loc>
+    <loc>https://ioaa-austria.at/informationen/ablauf/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ioaa-austria.github.io/astro/categories/</loc>
+    <loc>https://ioaa-austria.at/categories/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ioaa-austria.github.io/astro/informationen/lernmaterialien/</loc>
+    <loc>https://ioaa-austria.at/informationen/lernmaterialien/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ioaa-austria.github.io/astro/informationen/regeln/</loc>
+    <loc>https://ioaa-austria.at/informationen/regeln/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ioaa-austria.github.io/astro/informationen/sylabus/</loc>
+    <loc>https://ioaa-austria.at/informationen/sylabus/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ioaa-austria.github.io/astro/tags/</loc>
+    <loc>https://ioaa-austria.at/tags/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://ioaa-austria.github.io/astro/news/ioaa_2023/</loc>
+    <loc>https://ioaa-austria.at/news/ioaa_2023/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>News on IOAA–Austria</title>
-    <link>https://ioaa-austria.github.io/astro/news/</link>
+    <link>https://ioaa-austria.at/news/</link>
     <description>Recent content in News on IOAA–Austria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
     <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ioaa-austria.github.io/astro/news/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ioaa-austria.at/news/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wir bei der IOAA–2023</title>
-      <link>https://ioaa-austria.github.io/astro/news/ioaa_2023/</link>
+      <link>https://ioaa-austria.at/news/ioaa_2023/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ioaa-austria.github.io/astro/news/ioaa_2023/</guid>
+      <guid>https://ioaa-austria.at/news/ioaa_2023/</guid>
       <description>In 2023 nahm Österreich zum ersten Mal an der Internationalen Astronomie- und Astrophysik-Olympiade (IOAA) teil. Die Teilnahme an der 16th „International Olypmiad on Astronomy and Astrophysics“ 2023 wurde von Schülern aus Niederösterreich mithilfe der Niederösterreichischen Science Academy organisiert.&#xA;Vier Schüler (Taylan Algan, Elias Koschier, Thomas Riedle und Vincent Willis) in Begleitung von ihrem Team Leader (Miro Joensuu) fuhren gemeinsam nach Chorzów in Polen, um ihr Können auf die Probe zu stellen.</description>
     </item>
   </channel>

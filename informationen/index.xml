@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Informationen on IOAA–Austria</title>
-    <link>https://ioaa-austria.github.io/astro/informationen/</link>
+    <link>https://ioaa-austria.at/informationen/</link>
     <description>Recent content in Informationen on IOAA–Austria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
     <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ioaa-austria.github.io/astro/informationen/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ioaa-austria.at/informationen/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ablauf</title>
-      <link>https://ioaa-austria.github.io/astro/informationen/ablauf/</link>
+      <link>https://ioaa-austria.at/informationen/ablauf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ioaa-austria.github.io/astro/informationen/ablauf/</guid>
+      <guid>https://ioaa-austria.at/informationen/ablauf/</guid>
       <description>Der Wettbewerb findet in drei Stufen statt:&#xA;Zunächst bekommen Schüler*innen aus Österreich die Möglichkeit, die Problemstellungen der etwa einmonatigen Hausaufgabenrunde zu bearbeiten. Erfolgreiche Einsendungen werden bewertet und die besten, maximal 20 Einsendungen, erhalten eine Einladung zur Bundesrunde.&#xA;Bei der Bundesrunde messen sich die besten österreichischen Astronomen und Astrophysiker in einer mehrstündigen Onlineklausur. Die besten 3 bekommen die Chance, an der diesjährigen IOAA teilzunehmen.&#xA;Die IOAA findet vom 17.08. bis 26.08. in Rio de Janeiro, Brasilien, statt.</description>
     </item>
     <item>
       <title>Lernmaterialien</title>
-      <link>https://ioaa-austria.github.io/astro/informationen/lernmaterialien/</link>
+      <link>https://ioaa-austria.at/informationen/lernmaterialien/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ioaa-austria.github.io/astro/informationen/lernmaterialien/</guid>
+      <guid>https://ioaa-austria.at/informationen/lernmaterialien/</guid>
       <description>Die österreichische Olympiade richtet sich nach internationalem Vorbild. Die wichtigsten Lernmaterialien finden sich auf Astro Sandbox (extern). Außerdem lassen sich einige Altklausuren auf der Seite des internationalen Bewerbs (extern) finden.</description>
     </item>
     <item>
       <title>Regeln</title>
-      <link>https://ioaa-austria.github.io/astro/informationen/regeln/</link>
+      <link>https://ioaa-austria.at/informationen/regeln/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ioaa-austria.github.io/astro/informationen/regeln/</guid>
+      <guid>https://ioaa-austria.at/informationen/regeln/</guid>
       <description>Teilnahme Die Teilnahme ist allen im Wettbewerbsjahr an einer österreichischen Schule, in der Oberstufe eingeschriebenen Schüler*innen gestattet, die zum 1. Juli des Jahres noch jünger als 20 sind. Insbesondere können also auch Schüler*innen im Maturajahrgang teilnehmen.&#xA;Staatsbürgerschaft ist für die Teilnahme nicht ausschlaggebend. Es können auch Schüler*innen an österreichischen Auslandsschulen am Wettbewerb teilnehmen.&#xA;Klausuren Die Aufgaben jeder Runde (inklusive der Hausaufgabenrunde) sollen alleine bearbeitet werden.&#xA;Bei der Hausaufgabenrunde dürfen alle Hilfsmittel zu Rat gezogen werden.</description>
     </item>
     <item>
       <title>Syllabus</title>
-      <link>https://ioaa-austria.github.io/astro/informationen/sylabus/</link>
+      <link>https://ioaa-austria.at/informationen/sylabus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ioaa-austria.github.io/astro/informationen/sylabus/</guid>
+      <guid>https://ioaa-austria.at/informationen/sylabus/</guid>
       <description>Unter Bearbeitung.&#xA;Währenddessen: Internationaler Syllabus (extern).</description>
     </item>
   </channel>
