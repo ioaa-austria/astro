@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ioaa-austria.at/sitemap.xml
