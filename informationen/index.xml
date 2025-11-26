@@ -1,40 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Informationen on IOAA–Austria</title>
-    <link>https://ioaa-austria.at/informationen/</link>
-    <description>Recent content in Informationen on IOAA–Austria</description>
-    <generator>Hugo</generator>
-    <language>de</language>
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ioaa-austria.at/informationen/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Ablauf</title>
-      <link>https://ioaa-austria.at/informationen/ablauf/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ioaa-austria.at/informationen/ablauf/</guid>
-      <description>&lt;p&gt;Der Wettbewerb findet in drei Stufen statt:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Zunächst bekommen Schüler:innen aus Österreich die Möglichkeit, die Problemstellungen der etwa zweimonatigen &lt;strong&gt;Hausaufgabenrunde&lt;/strong&gt; zu bearbeiten. Erfolgreiche Einsendungen werden bewertet und die besten, maximal 20 Einsendungen, erhalten eine Einladung zur Bundesrunde.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Bei der (online) &lt;strong&gt;Bundesrunde&lt;/strong&gt;, &lt;!-- die am 22.03.2025  online stattfindet,--&gt;  messen sich die besten österreichischen Astronomen und Astrophysiker in einer mehrstündigen Onlineklausur.  Die besten 5 bekommen die Chance, an der nächsten IOAA teilzunehmen.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Lernmaterialien</title>
-      <link>https://ioaa-austria.at/informationen/lernmaterialien/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ioaa-austria.at/informationen/lernmaterialien/</guid>
-      <description>&lt;p&gt;Das beste Training sind Altklausuren, daher findest du hier unsere Aufgaben aus vergangenen Jahren:&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Jahr&lt;/th&gt;&#xA;          &lt;th&gt;Hausaufgabenrunde&lt;/th&gt;&#xA;          &lt;th&gt;Bundesrunde&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;2024&lt;/td&gt;&#xA;          &lt;td&gt;&lt;a href=&#34;https://ioaa-austria.at/files/Hausaufgabenrunde_IOAA-Austria_2024.pdf&#34;&gt;Hausaufgabenrunde 2024&lt;/a&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;a href=&#34;https://ioaa-austria.at/files/IOAA-Austria_Bundesrunde_2024.pdf&#34;&gt;Bundesrunde 2024&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;2025&lt;/td&gt;&#xA;          &lt;td&gt;&lt;a href=&#34;https://ioaa-austria.at/files/Hausaufgabenrunde_IOAA-Austria_2025.pdf&#34;&gt;Hausaufgabenrunde 2025&lt;/a&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;a href=&#34;https://ioaa-austria.at/files/IOAA-Austria_Bundesrunde_2025.pdf&#34;&gt;Bundesrunde 2025&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;Die Aufgaben der österreichischen Olympiade werden nach internationalem Vorbild gestellt. Diese kann man auf der Seite des &lt;a href=&#34;https://ioaastrophysics.org/resources/problems-from-past-ioaa&#34;&gt;internationalen Bewerbs&lt;/a&gt; finden.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Regeln</title>
-      <link>https://ioaa-austria.at/informationen/regeln/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ioaa-austria.at/informationen/regeln/</guid>
-      <description>&lt;h3 id=&#34;teilnahme&#34;&gt;Teilnahme&lt;/h3&gt;&#xA;&lt;p&gt;Die Teilnahme ist allen im Wettbewerbsjahr an einer österreichischen Schule, in der Oberstufe eingeschriebenen Schüler:innen gestattet, die zum 1. Juli des Jahres noch jünger als 20 sind. Insbesondere können also auch Schüler:innen im Maturajahrgang teilnehmen.&lt;/p&gt;&#xA;&lt;p&gt;Staatsbürgerschaft ist für die Teilnahme nicht ausschlaggebend.&lt;/p&gt;&#xA;&lt;h3 id=&#34;klausuren&#34;&gt;Klausuren&lt;/h3&gt;&#xA;&lt;p&gt;Die Aufgaben jeder Runde (inklusive der Hausaufgabenrunde) sollen alleine bearbeitet werden.&lt;/p&gt;&#xA;&lt;p&gt;Bei der Hausaufgabenrunde dürfen alle Hilfsmittel zurate gezogen werden. Das beinhaltet Bücher, das Internet und Programme wie Stellarium. Die besten, maximal 20, Teilnehmer:innen der Hausaufgabenrunde erhalten die Möglichkeit, an der Bundesrunde teilzunehmen.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Syllabus</title>
-      <link>https://ioaa-austria.at/informationen/sylabus/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ioaa-austria.at/informationen/sylabus/</guid>
-      <description>&lt;p&gt;Unser Syllabus entspricht momentan dem &lt;a href=&#34;https://www.ioaastrophysics.org/syllabus/&#34;&gt;internationalen Syllabus (extern)&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Informationen on IOAA–Austria</title><link>https://ioaa-austria.at/informationen/</link><description>Recent content in Informationen on IOAA–Austria</description><generator>Hugo</generator><language>de</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://ioaa-austria.at/informationen/index.xml" rel="self" type="application/rss+xml"/><item><title>Ablauf</title><link>https://ioaa-austria.at/informationen/ablauf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ioaa-austria.at/informationen/ablauf/</guid><description>&lt;p&gt;Der Wettbewerb findet in drei Stufen statt:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Zunächst bekommen Schüler:innen aus Österreich die Möglichkeit, Aufgaben in Ruhe zu Hause in unseren drei Hausaufgabenrunden zu bearbeiten. Dieses Jahr werden diese Runden vorraussichtlich jeweils im Januar, März und Mai stattfinden. Erfolgreiche Einsendungen werden bewertet und die besten, maximal 20 Einsendungen, erhalten eine Einladung zur Bundesrunde.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bei der (online) &lt;strong&gt;Bundesrunde&lt;/strong&gt;, &lt;!-- die am 22.03.2025 online stattfindet,--&gt; messen sich die besten österreichischen Astronomen und Astrophysiker in einer mehrstündigen Onlineklausur. Die Punkte der Hausaufgabenrunden sowie die der Bundesrunde werden zusammen gewertet und die besten 5 Schüler:innen bekommen die Chance, an der IOAA teilzunehmen.&lt;/p&gt;</description></item><item><title>Lernmaterialien</title><link>https://ioaa-austria.at/informationen/lernmaterialien/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ioaa-austria.at/informationen/lernmaterialien/</guid><description>&lt;p&gt;Das beste Training sind Altklausuren, daher findest du hier unsere Aufgaben aus vergangenen Jahren:&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Jahr&lt;/th&gt;
+ &lt;th&gt;Hausaufgabenrunde&lt;/th&gt;
+ &lt;th&gt;Bundesrunde&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;2024&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://ioaa-austria.at/files/Hausaufgabenrunde_IOAA-Austria_2024.pdf"&gt;Hausaufgabenrunde 2024&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://ioaa-austria.at/files/IOAA-Austria_Bundesrunde_2024.pdf"&gt;Bundesrunde 2024&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;2025&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://ioaa-austria.at/files/Hausaufgabenrunde_IOAA-Austria_2025.pdf"&gt;Hausaufgabenrunde 2025&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://ioaa-austria.at/files/IOAA-Austria_Bundesrunde_2025.pdf"&gt;Bundesrunde 2025&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Die Aufgaben der österreichischen Olympiade werden nach internationalem Vorbild gestellt. Diese kann man auf der Seite des &lt;a href="https://ioaastrophysics.org/resources/problems-from-past-ioaa"&gt;internationalen Bewerbs&lt;/a&gt; finden.&lt;/p&gt;</description></item><item><title>Regeln</title><link>https://ioaa-austria.at/informationen/regeln/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ioaa-austria.at/informationen/regeln/</guid><description>&lt;h3 id="teilnahme"&gt;Teilnahme&lt;/h3&gt;
+&lt;p&gt;Die Teilnahme ist allen im Wettbewerbsjahr an einer österreichischen Schule, in der Oberstufe eingeschriebenen Schüler:innen gestattet, die zum 1. Juli des Jahres noch jünger als 20 sind. Insbesondere können also auch Schüler:innen im Maturajahrgang teilnehmen.&lt;/p&gt;
+&lt;p&gt;Staatsbürgerschaft ist für die Teilnahme nicht ausschlaggebend.&lt;/p&gt;
+&lt;h3 id="klausuren"&gt;Klausuren&lt;/h3&gt;
+&lt;p&gt;Die Aufgaben jeder Runde (inklusive der Hausaufgabenrunden) sollen alleine bearbeitet werden.&lt;/p&gt;
+&lt;p&gt;Bei den Hausaufgabenrunden dürfen alle Hilfsmittel zurate gezogen werden. Das beinhaltet Bücher, das Internet und Programme wie Stellarium. Die besten, maximal 20, Teilnehmer:innen der Hausaufgabenrunden erhalten die Möglichkeit, an der Bundesrunde teilzunehmen.&lt;/p&gt;</description></item><item><title>Syllabus</title><link>https://ioaa-austria.at/informationen/sylabus/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ioaa-austria.at/informationen/sylabus/</guid><description>&lt;p&gt;Unser Syllabus entspricht momentan dem &lt;a href="https://www.ioaastrophysics.org/syllabus/"&gt;internationalen Syllabus (extern)&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>
