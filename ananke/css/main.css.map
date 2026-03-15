@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/home/miro/Documents/IOAA-Austria_Website/Website-Development/IOAA-Austria-Website",
+	"sourceRoot": "/home/miro/Documents/IOAA-Austria_Website/Website-Development",
 	"sources": [
 		"ananke/css/main.css"
 	],
