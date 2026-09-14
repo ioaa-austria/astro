@@ -41,7 +41,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://ioaa-austria.at/news/ceoaa_2026/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://ioaa-austria.at/informationen/regeln/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://ioaa-austria.at/news/training_2026/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
