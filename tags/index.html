@@ -16,11 +16,152 @@
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.92c5e4c80c6b9404f17414395daf374340061c3b47a64e3893c27b79b6dec714.css" >
+<link rel="stylesheet" href="/ananke/css/main.min.297335c18c03763b8ef67eba492828488388f58a4d0f0ac285ec08f5e6c3b6b7.css" >
 
 
 
     
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var desktopQuery = window.matchMedia('(min-width: 60em)');
+
+     
+    var nav = document.querySelector('.site-nav');
+    if (nav) {
+      var toggle = nav.querySelector('.nav-toggle');
+      var menu = nav.querySelector('#site-menu');
+
+      if (toggle && menu) {
+        function closeSubmenus(except) {
+          nav.querySelectorAll('.dropdown.is-open').forEach(function (dropdown) {
+            if (except && dropdown === except) return;
+            dropdown.classList.remove('is-open');
+            var btn = dropdown.querySelector('.dropdown-toggle');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+          });
+        }
+
+        function setOpen(open) {
+          nav.classList.toggle('is-open', open);
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+          if (!open) closeSubmenus();
+        }
+
+        toggle.addEventListener('click', function () {
+          setOpen(!nav.classList.contains('is-open'));
+        });
+
+        nav.querySelectorAll('.dropdown-toggle').forEach(function (btn) {
+          btn.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            if (desktopQuery.matches) return;
+
+            var dropdown = btn.closest('.dropdown');
+            var willOpen = !dropdown.classList.contains('is-open');
+            closeSubmenus(willOpen ? dropdown : null);
+            dropdown.classList.toggle('is-open', willOpen);
+            btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+          });
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape') {
+            if (nav.querySelector('.dropdown.is-open')) {
+              closeSubmenus();
+            } else {
+              setOpen(false);
+            }
+          }
+        });
+
+        document.addEventListener('click', function (event) {
+          if (desktopQuery.matches) return;
+          if (!nav.contains(event.target)) {
+            closeSubmenus();
+            return;
+          }
+          if (!event.target.closest('.dropdown')) {
+            closeSubmenus();
+          }
+        });
+
+        window.addEventListener('resize', function () {
+          if (desktopQuery.matches) {
+            setOpen(false);
+            closeSubmenus();
+          }
+        });
+      }
+    }
+
+     
+    var timelines = document.querySelectorAll('[data-year-timeline]');
+    if (!timelines.length) return;
+
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var search = window.location.search;
+    var host = window.location.hostname;
+    var localPreview = host === 'localhost' || host === '127.0.0.1';
+    
+    
+    var forceMotion =
+      /(?:\?|&)motion=1(?:&|$)/.test(search) ||
+      (localPreview && reduceMotion && !/(?:\?|&)motion=0(?:&|$)/.test(search));
+    var animate = !reduceMotion || forceMotion;
+    if (forceMotion) document.documentElement.classList.add('force-motion');
+
+    var heroButton = document.querySelector('[data-hero-button]');
+    var heroPrompt = document.querySelector('[data-hero-prompt]');
+
+    function show(el) {
+      if (el) el.classList.add('is-visible');
+    }
+
+    function startHeroSequence(timeline) {
+      if (timeline.classList.contains('is-visible')) return;
+
+      if (!animate) {
+        show(heroButton);
+        show(timeline);
+        show(heroPrompt);
+        return;
+      }
+
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          
+          show(heroButton);
+          setTimeout(function () {
+            show(timeline);
+            setTimeout(function () {
+              show(heroPrompt);
+            }, 1400);
+          }, 320);
+        });
+      });
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      timelines.forEach(startHeroSequence);
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        startHeroSequence(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+
+    timelines.forEach(function (timeline) {
+      observer.observe(timeline);
+    });
+  });
+</script>
+
 
     
       
@@ -58,25 +199,48 @@
   
   <header class="cover bg-top" style="background-image: url('https://ioaa-austria.at/images/gohugo-default-sample-hero-image.jpg');">
     <div class="bg-black-60">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib flex items-center">
-      
-        <img src="/images/IOAA_Austria_Logo_2.svg" class="w100 mw3" />
-      
-      IOAA–Austria
-    </a>
-    <div class="flex-l items-center">
+      <nav class="pv3 ph3 ph4-ns site-nav" role="navigation">
+  <div class="site-nav__inner">
+    <div class="site-nav__bar">
+      <a href="/" class="f3 fw2 hover-white no-underline white-90 dib flex items-center site-nav__brand">
+        
+          <img src="/images/IOAA_Austria_Logo_2.svg" class="w100 mw3" alt="" />
+        
+        IOAA–Austria
+      </a>
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="site-menu"
+        aria-label="Menü öffnen"
+      >
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div id="site-menu" class="site-nav__menu">
       
 
       
-        <ul class="pl0 mr3">
+        <ul class="site-nav__list pl0 mr3">
           
-              <li class="list f5 f4-ns fw4 dib pr3">
-                  <div class="dropdown">
-                    <a class="hover-white no-underline white-90" href="/informationen/">
-                      Informationen
-                    </a>
+              <li class="list f5 f4-ns fw4 site-nav__item pr3">
+                  <div class="dropdown dropdown--has-children">
+                    <div class="dropdown__trigger">
+                      <a class="hover-white no-underline white-90 site-nav__link" href="/informationen/">
+                        Informationen
+                      </a>
+                      
+                      <button
+                        type="button"
+                        class="dropdown-toggle"
+                        aria-expanded="false"
+                        aria-label="Untermenü Informationen"
+                      >
+                        <span class="dropdown-toggle__icon" aria-hidden="true"></span>
+                      </button>
+                      
+                    </div>
                     
                     <div class="dropdown-content">
                       
@@ -93,29 +257,47 @@
                   </div>
               </li>
           
-              <li class="list f5 f4-ns fw4 dib pr3">
+              <li class="list f5 f4-ns fw4 site-nav__item pr3">
                   <div class="dropdown">
-                    <a class="hover-white no-underline white-90" href="/mitmachen/">
-                      Mitmachen
-                    </a>
+                    <div class="dropdown__trigger">
+                      <a class="hover-white no-underline white-90 site-nav__link" href="/mitmachen/">
+                        Mitmachen
+                      </a>
+                      
+                    </div>
                     
                   </div>
               </li>
           
-              <li class="list f5 f4-ns fw4 dib pr3">
+              <li class="list f5 f4-ns fw4 site-nav__item pr3">
                   <div class="dropdown">
-                    <a class="hover-white no-underline white-90" href="/kontakt/">
-                      Kontakt
-                    </a>
+                    <div class="dropdown__trigger">
+                      <a class="hover-white no-underline white-90 site-nav__link" href="/kontakt/">
+                        Kontakt
+                      </a>
+                      
+                    </div>
                     
                   </div>
               </li>
           
-              <li class="list f5 f4-ns fw4 dib pr3">
-                  <div class="dropdown">
-                    <a class="hover-white no-underline white-90" href="/news/">
-                      News
-                    </a>
+              <li class="list f5 f4-ns fw4 site-nav__item pr3">
+                  <div class="dropdown dropdown--has-children">
+                    <div class="dropdown__trigger">
+                      <a class="hover-white no-underline white-90 site-nav__link" href="/news/">
+                        News
+                      </a>
+                      
+                      <button
+                        type="button"
+                        class="dropdown-toggle"
+                        aria-expanded="false"
+                        aria-label="Untermenü News"
+                      >
+                        <span class="dropdown-toggle__icon" aria-hidden="true"></span>
+                      </button>
+                      
+                    </div>
                     
                     <div class="dropdown-content">
                       

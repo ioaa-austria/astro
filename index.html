@@ -16,11 +16,152 @@
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.92c5e4c80c6b9404f17414395daf374340061c3b47a64e3893c27b79b6dec714.css" >
+<link rel="stylesheet" href="/ananke/css/main.min.297335c18c03763b8ef67eba492828488388f58a4d0f0ac285ec08f5e6c3b6b7.css" >
 
 
 
     
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var desktopQuery = window.matchMedia('(min-width: 60em)');
+
+     
+    var nav = document.querySelector('.site-nav');
+    if (nav) {
+      var toggle = nav.querySelector('.nav-toggle');
+      var menu = nav.querySelector('#site-menu');
+
+      if (toggle && menu) {
+        function closeSubmenus(except) {
+          nav.querySelectorAll('.dropdown.is-open').forEach(function (dropdown) {
+            if (except && dropdown === except) return;
+            dropdown.classList.remove('is-open');
+            var btn = dropdown.querySelector('.dropdown-toggle');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+          });
+        }
+
+        function setOpen(open) {
+          nav.classList.toggle('is-open', open);
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+          if (!open) closeSubmenus();
+        }
+
+        toggle.addEventListener('click', function () {
+          setOpen(!nav.classList.contains('is-open'));
+        });
+
+        nav.querySelectorAll('.dropdown-toggle').forEach(function (btn) {
+          btn.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            if (desktopQuery.matches) return;
+
+            var dropdown = btn.closest('.dropdown');
+            var willOpen = !dropdown.classList.contains('is-open');
+            closeSubmenus(willOpen ? dropdown : null);
+            dropdown.classList.toggle('is-open', willOpen);
+            btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+          });
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape') {
+            if (nav.querySelector('.dropdown.is-open')) {
+              closeSubmenus();
+            } else {
+              setOpen(false);
+            }
+          }
+        });
+
+        document.addEventListener('click', function (event) {
+          if (desktopQuery.matches) return;
+          if (!nav.contains(event.target)) {
+            closeSubmenus();
+            return;
+          }
+          if (!event.target.closest('.dropdown')) {
+            closeSubmenus();
+          }
+        });
+
+        window.addEventListener('resize', function () {
+          if (desktopQuery.matches) {
+            setOpen(false);
+            closeSubmenus();
+          }
+        });
+      }
+    }
+
+     
+    var timelines = document.querySelectorAll('[data-year-timeline]');
+    if (!timelines.length) return;
+
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var search = window.location.search;
+    var host = window.location.hostname;
+    var localPreview = host === 'localhost' || host === '127.0.0.1';
+    
+    
+    var forceMotion =
+      /(?:\?|&)motion=1(?:&|$)/.test(search) ||
+      (localPreview && reduceMotion && !/(?:\?|&)motion=0(?:&|$)/.test(search));
+    var animate = !reduceMotion || forceMotion;
+    if (forceMotion) document.documentElement.classList.add('force-motion');
+
+    var heroButton = document.querySelector('[data-hero-button]');
+    var heroPrompt = document.querySelector('[data-hero-prompt]');
+
+    function show(el) {
+      if (el) el.classList.add('is-visible');
+    }
+
+    function startHeroSequence(timeline) {
+      if (timeline.classList.contains('is-visible')) return;
+
+      if (!animate) {
+        show(heroButton);
+        show(timeline);
+        show(heroPrompt);
+        return;
+      }
+
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          
+          show(heroButton);
+          setTimeout(function () {
+            show(timeline);
+            setTimeout(function () {
+              show(heroPrompt);
+            }, 1400);
+          }, 320);
+        });
+      });
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      timelines.forEach(startHeroSequence);
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        startHeroSequence(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+
+    timelines.forEach(function (timeline) {
+      observer.observe(timeline);
+    });
+  });
+</script>
+
 
     
       
@@ -47,7 +188,7 @@
 	<meta itemprop="description" content="Österreichische Astronomie und Astrophysik Olympiade">
 	<meta itemprop="datePublished" content="2023-09-08T14:10:49+01:00">
 	<meta itemprop="dateModified" content="2023-09-08T14:10:49+01:00">
-	<meta itemprop="wordCount" content="125">
+	<meta itemprop="wordCount" content="88">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="IOAA–Austria">
 	<meta name="twitter:description" content="Österreichische Astronomie und Astrophysik Olympiade">
@@ -64,25 +205,48 @@
   
   <header class="cover bg-top" style="background-image: url('https://ioaa-austria.at/images/gohugo-default-sample-hero-image.jpg');">
     <div class="bg-black-60">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib flex items-center">
-      
-        <img src="/images/IOAA_Austria_Logo_2.svg" class="w100 mw3" />
-      
-      IOAA–Austria
-    </a>
-    <div class="flex-l items-center">
+      <nav class="pv3 ph3 ph4-ns site-nav" role="navigation">
+  <div class="site-nav__inner">
+    <div class="site-nav__bar">
+      <a href="/" class="f3 fw2 hover-white no-underline white-90 dib flex items-center site-nav__brand">
+        
+          <img src="/images/IOAA_Austria_Logo_2.svg" class="w100 mw3" alt="" />
+        
+        IOAA–Austria
+      </a>
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="site-menu"
+        aria-label="Menü öffnen"
+      >
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div id="site-menu" class="site-nav__menu">
       
 
       
-        <ul class="pl0 mr3">
+        <ul class="site-nav__list pl0 mr3">
           
-              <li class="list f5 f4-ns fw4 dib pr3">
-                  <div class="dropdown">
-                    <a class="hover-white no-underline white-90" href="/informationen/">
-                      Informationen
-                    </a>
+              <li class="list f5 f4-ns fw4 site-nav__item pr3">
+                  <div class="dropdown dropdown--has-children">
+                    <div class="dropdown__trigger">
+                      <a class="hover-white no-underline white-90 site-nav__link" href="/informationen/">
+                        Informationen
+                      </a>
+                      
+                      <button
+                        type="button"
+                        class="dropdown-toggle"
+                        aria-expanded="false"
+                        aria-label="Untermenü Informationen"
+                      >
+                        <span class="dropdown-toggle__icon" aria-hidden="true"></span>
+                      </button>
+                      
+                    </div>
                     
                     <div class="dropdown-content">
                       
@@ -99,29 +263,47 @@
                   </div>
               </li>
           
-              <li class="list f5 f4-ns fw4 dib pr3">
+              <li class="list f5 f4-ns fw4 site-nav__item pr3">
                   <div class="dropdown">
-                    <a class="hover-white no-underline white-90" href="/mitmachen/">
-                      Mitmachen
-                    </a>
+                    <div class="dropdown__trigger">
+                      <a class="hover-white no-underline white-90 site-nav__link" href="/mitmachen/">
+                        Mitmachen
+                      </a>
+                      
+                    </div>
                     
                   </div>
               </li>
           
-              <li class="list f5 f4-ns fw4 dib pr3">
+              <li class="list f5 f4-ns fw4 site-nav__item pr3">
                   <div class="dropdown">
-                    <a class="hover-white no-underline white-90" href="/kontakt/">
-                      Kontakt
-                    </a>
+                    <div class="dropdown__trigger">
+                      <a class="hover-white no-underline white-90 site-nav__link" href="/kontakt/">
+                        Kontakt
+                      </a>
+                      
+                    </div>
                     
                   </div>
               </li>
           
-              <li class="list f5 f4-ns fw4 dib pr3">
-                  <div class="dropdown">
-                    <a class="hover-white no-underline white-90" href="/news/">
-                      News
-                    </a>
+              <li class="list f5 f4-ns fw4 site-nav__item pr3">
+                  <div class="dropdown dropdown--has-children">
+                    <div class="dropdown__trigger">
+                      <a class="hover-white no-underline white-90 site-nav__link" href="/news/">
+                        News
+                      </a>
+                      
+                      <button
+                        type="button"
+                        class="dropdown-toggle"
+                        aria-expanded="false"
+                        aria-label="Untermenü News"
+                      >
+                        <span class="dropdown-toggle__icon" aria-hidden="true"></span>
+                      </button>
+                      
+                    </div>
                     
                     <div class="dropdown-content">
                       
@@ -185,15 +367,58 @@
     <main class="pb7" role="main">
       
  <article class="cf ph3 ph2-l pv3 pv4-l f4 tj-l center mw7-ns lh-copy mid-gray">
-    <p>Du interessierst dich für die Physik von Planeten und Sternen, findest den Nachthimmel aufregend und bist bereit für eine Herausforderung? Dann bist du bei uns genau richtig!</p>
-<div style="text-align: center;">
-  <a href="/mitmachen/" class="button center" style="margin-right: 20px;">Mach mit!</a>
+    <div class="hero-cta">
+  <a href="/mitmachen/" class="hero-cta__button" data-hero-button><span class="hero-cta__button-label">Mach mit!</span></a>
 </div>
+<div class="year-timeline" data-year-timeline aria-label="Jahresablauf IOAA">
+  <div class="year-timeline__inner">
+    <div class="year-timeline__rail" aria-hidden="true">
+      <div class="year-timeline__line"></div>
+      <div class="year-timeline__arrow"></div>
+    </div>
+
+    <ol class="year-timeline__stops">
+      <li class="year-timeline__stop year-timeline__stop--above" style="--stop-index: 0;">
+        <a class="year-timeline__link" href="/news/bundesrunde_2026/">
+          <div class="year-timeline__label">
+            <span class="year-timeline__title">Auswahlphase</span>
+            <span class="year-timeline__dates">Frühjahr 2027</span>
+          </div>
+          <span class="year-timeline__stem" aria-hidden="true"></span>
+          <span class="year-timeline__sphere year-timeline__sphere--jupiter" aria-hidden="true"></span>
+        </a>
+      </li>
+
+      <li class="year-timeline__stop year-timeline__stop--below" style="--stop-index: 1;">
+        <a class="year-timeline__link" href="/news/training_2026/">
+          <span class="year-timeline__sphere year-timeline__sphere--rocky" aria-hidden="true"></span>
+          <span class="year-timeline__stem" aria-hidden="true"></span>
+          <div class="year-timeline__label">
+            <span class="year-timeline__title">Trainingsphase</span>
+            <span class="year-timeline__dates">Sommer 2027</span>
+          </div>
+        </a>
+      </li>
+
+      <li class="year-timeline__stop year-timeline__stop--above" style="--stop-index: 2;">
+        <a class="year-timeline__link" href="/news/ioaa_2025/">
+          <div class="year-timeline__label">
+            <span class="year-timeline__title">IOAA</span>
+            <span class="year-timeline__dates">Spätsommer 2027</span>
+          </div>
+          <span class="year-timeline__stem" aria-hidden="true"></span>
+          <span class="year-timeline__sphere year-timeline__sphere--ice" aria-hidden="true"></span>
+        </a>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<p class="hero-cta__prompt" data-hero-prompt>Bist du bereit für die Herausforderung?</p>
 <div style="margin-bottom: 100px;"></div>
 <div style="border: 2px solid #3498db; padding: 0 20px;">
 <h3 id="die-ioaa">Die IOAA</h3>
-<p>Die IOAA (International Olympiad on Astronomy and Astrophysics) ist ein jährlich stattfindender Schülerwettbewerb in Astronomie und Astrophysik. Die Olympiade ist in einen theoretischen und einen praktischen Teil unterteilt, bei dem die Schüler:innen in mehrstündigen Klausuren ihr Können unter Beweis stellen. Im Mittelpunkt steht neben der Astronomie und Astrophysik aber auch der Austausch mit ähnlich Gesinnten.</p>
-<p>Seit 2007 findet die IOAA parallel zu anderen Wissenschaftsolympiaden wie der Mathematik- und Physikolympiade international statt. Die etwa 50 teilnehmenden Länder werden dabei jeweils durch fünf Schüler:innen bei dem Wettbewerb vertreten. Hier findest du die <a href="https://www.ioaastrophysics.org">IOAA Website</a>.  </div></p>
+<p>Die <a href="https://www.ioaastrophysics.org">IOAA Website</a> (International Olympiad on Astronomy and Astrophysics) ist ein jährlich stattfindender Schülerwettbewerb in Astronomie und Astrophysik. Die Olympiade ist in einen theoretischen und einen praktischen Teil unterteilt, bei dem die Schüler:innen in mehrstündigen Klausuren ihr Können unter Beweis stellen. Im Mittelpunkt steht neben der Astronomie und Astrophysik auch der internationale Austausch. Die etwa 60 teilnehmenden Länder werden dabei jeweils durch fünf Schüler:innen vertreten. <a href="https://www.ioaastrophysics.org">IOAA Website</a>. </div></p>
 <!-- Sponsors Section -->
 <div style="margin-top: 50px; text-align: center;">
   <h2>Unterstützt durch</h2>
@@ -225,7 +450,7 @@
     
     
 
-    <div class="pa3 pa4-ns w-100 w-70-ns center">
+    <div class="pa3 pa4-l mw8 center">
       
        
           <h1 class="flex-none">
@@ -235,29 +460,29 @@
 
       
 
-      <section class="w-100 mw8">
+      <section class="w-100">
         
         
           <div class="relative w-100 mb4">
             
-<article class="bb b--black-10">
+<article class="bb b--black-10 news-summary">
   <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
+    <div class="flex flex-column flex-row-l">
       
           
-        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+        <div class="news-summary__media pr3-l mb3 mb0-l w-100 w-40-l">
           <a href="/news/ceoaa_2026/" class="db grow">
-            <img src="https://ioaa-austria.at/images/CEOAA_2026/IMG_1864.JPG" class="img" alt="image from Österreich bei der CEOAA 2026 in Zagreb">
+            <img src="https://ioaa-austria.at/images/CEOAA_2026/IMG_1864.JPG" class="img news-summary__img" alt="image from Österreich bei der CEOAA 2026 in Zagreb">
           </a>
         </div>
       
-      <div class="blah w-100 w-60-ns pl3-ns">
+      <div class="news-summary__body w-100 w-60-l pl3-l">
         <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/news/ceoaa_2026/" class="color-inherit dim link">
             Österreich bei der CEOAA 2026 in Zagreb
             </a>
         </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+        <div class="f5 lh-copy nested-copy-line-height nested-links">
           
           
           
@@ -460,24 +685,24 @@
         
           <div class="relative w-100 mb4">
             
-<article class="bb b--black-10">
+<article class="bb b--black-10 news-summary">
   <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
+    <div class="flex flex-column flex-row-l">
       
           
-        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+        <div class="news-summary__media pr3-l mb3 mb0-l w-100 w-40-l">
           <a href="/news/training_2026/" class="db grow">
-            <img src="https://ioaa-austria.at/images/Training_2026/IMG-20260802-WA0002.jpg" class="img" alt="image from Sommertraining für die internationalen Astronomieolympiaden">
+            <img src="https://ioaa-austria.at/images/Training_2026/IMG-20260802-WA0002.jpg" class="img news-summary__img" alt="image from Sommertraining für die internationalen Astronomieolympiaden">
           </a>
         </div>
       
-      <div class="blah w-100 w-60-ns pl3-ns">
+      <div class="news-summary__body w-100 w-60-l pl3-l">
         <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/news/training_2026/" class="color-inherit dim link">
             Sommertraining für die internationalen Astronomieolympiaden
             </a>
         </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+        <div class="f5 lh-copy nested-copy-line-height nested-links">
           
           
           
@@ -718,24 +943,24 @@
         
           <div class="relative w-100 mb4">
             
-<article class="bb b--black-10">
+<article class="bb b--black-10 news-summary">
   <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
+    <div class="flex flex-column flex-row-l">
       
           
-        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+        <div class="news-summary__media pr3-l mb3 mb0-l w-100 w-40-l">
           <a href="/news/bundesrunde_2026/" class="db grow">
-            <img src="https://ioaa-austria.at/images/Bundesrunde_2026_1.png" class="img" alt="image from Vorentscheid IOAA 2026">
+            <img src="https://ioaa-austria.at/images/Bundesrunde_2026_1.png" class="img news-summary__img" alt="image from Vorentscheid IOAA 2026">
           </a>
         </div>
       
-      <div class="blah w-100 w-60-ns pl3-ns">
+      <div class="news-summary__body w-100 w-60-l pl3-l">
         <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/news/bundesrunde_2026/" class="color-inherit dim link">
             Vorentscheid IOAA 2026
             </a>
         </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+        <div class="f5 lh-copy nested-copy-line-height nested-links">
           
           
           
