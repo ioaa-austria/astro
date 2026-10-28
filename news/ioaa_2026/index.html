@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en-us"ZgotmplZ>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Erste Medaillen für Österreich: IOAA 2026 in Hanoi | IOAA–Austria</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Fünf junge Astronomietalente, ein internationaler Wettbewerb und die ersten IOAA-Medaillen für Österreich: Unser Nationalteam kehrt mit einem historischen Erfolg aus Hanoi zurück.
+Die 19. Internationale Olympiade für Astronomie und Astrophysik (IOAA) führte vom 25. September bis zum 5. Oktober 2026 mehr als 300 Jugendliche aus 64 Ländern und Territorien in Hanoi zusammen. Für Österreich traten Lukas Doktor, Simon Spitaler, Moritz Eisl, Michal Rajec und Stefan Winkler an. Begleitet wurden sie von den Teamleitern Benjamin Tonner und Matthis Tradel sowie von Miro Joensuu als Beobachter.">
+    <meta name="generator" content="Hugo 0.163.3">
+    
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.297335c18c03763b8ef67eba492828488388f58a4d0f0ac285ec08f5e6c3b6b7.css" >
+
+
+
+    
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var desktopQuery = window.matchMedia('(min-width: 60em)');
+
+     
+    var nav = document.querySelector('.site-nav');
+    if (nav) {
+      var toggle = nav.querySelector('.nav-toggle');
+      var menu = nav.querySelector('#site-menu');
+
+      if (toggle && menu) {
+        function closeSubmenus(except) {
+          nav.querySelectorAll('.dropdown.is-open').forEach(function (dropdown) {
+            if (except && dropdown === except) return;
+            dropdown.classList.remove('is-open');
+            var btn = dropdown.querySelector('.dropdown-toggle');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+          });
+        }
+
+        function setOpen(open) {
+          nav.classList.toggle('is-open', open);
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+          if (!open) closeSubmenus();
+        }
+
+        toggle.addEventListener('click', function () {
+          setOpen(!nav.classList.contains('is-open'));
+        });
+
+        nav.querySelectorAll('.dropdown-toggle').forEach(function (btn) {
+          btn.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            if (desktopQuery.matches) return;
+
+            var dropdown = btn.closest('.dropdown');
+            var willOpen = !dropdown.classList.contains('is-open');
+            closeSubmenus(willOpen ? dropdown : null);
+            dropdown.classList.toggle('is-open', willOpen);
+            btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+          });
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape') {
+            if (nav.querySelector('.dropdown.is-open')) {
+              closeSubmenus();
+            } else {
+              setOpen(false);
+            }
+          }
+        });
+
+        document.addEventListener('click', function (event) {
+          if (desktopQuery.matches) return;
+          if (!nav.contains(event.target)) {
+            closeSubmenus();
+            return;
+          }
+          if (!event.target.closest('.dropdown')) {
+            closeSubmenus();
+          }
+        });
+
+        window.addEventListener('resize', function () {
+          if (desktopQuery.matches) {
+            setOpen(false);
+            closeSubmenus();
+          }
+        });
+      }
+    }
+
+     
+    var timelines = document.querySelectorAll('[data-year-timeline]');
+    if (!timelines.length) return;
+
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var search = window.location.search;
+    var host = window.location.hostname;
+    var localPreview = host === 'localhost' || host === '127.0.0.1';
+    
+    
+    var forceMotion =
+      /(?:\?|&)motion=1(?:&|$)/.test(search) ||
+      (localPreview && reduceMotion && !/(?:\?|&)motion=0(?:&|$)/.test(search));
+    var animate = !reduceMotion || forceMotion;
+    if (forceMotion) document.documentElement.classList.add('force-motion');
+
+    var heroButton = document.querySelector('[data-hero-button]');
+    var heroPrompt = document.querySelector('[data-hero-prompt]');
+
+    function show(el) {
+      if (el) el.classList.add('is-visible');
+    }
+
+    function startHeroSequence(timeline) {
+      if (timeline.classList.contains('is-visible')) return;
+
+      if (!animate) {
+        show(heroButton);
+        show(timeline);
+        show(heroPrompt);
+        return;
+      }
+
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          
+          show(heroButton);
+          setTimeout(function () {
+            show(timeline);
+            setTimeout(function () {
+              show(heroPrompt);
+            }, 1400);
+          }, 320);
+        });
+      });
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      timelines.forEach(startHeroSequence);
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        startHeroSequence(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+
+    timelines.forEach(function (timeline) {
+      observer.observe(timeline);
+    });
+  });
+</script>
+
+
+    
+      
+<link rel="shortcut icon" href="/images/IOAA_Austria_Logo_2.svg" type="image/x-icon" />
+
+
+    
+
+    
+
+    <meta property="og:url" content="https://ioaa-austria.at/news/ioaa_2026/">
+	<meta property="og:site_name" content="IOAA–Austria">
+	<meta property="og:title" content="Erste Medaillen für Österreich: IOAA 2026 in Hanoi">
+	<meta property="og:description" content="Fünf junge Astronomietalente, ein internationaler Wettbewerb und die ersten IOAA-Medaillen für Österreich: Unser Nationalteam kehrt mit einem historischen Erfolg aus Hanoi zurück.
+Die 19. Internationale Olympiade für Astronomie und Astrophysik (IOAA) führte vom 25. September bis zum 5. Oktober 2026 mehr als 300 Jugendliche aus 64 Ländern und Territorien in Hanoi zusammen. Für Österreich traten Lukas Doktor, Simon Spitaler, Moritz Eisl, Michal Rajec und Stefan Winkler an. Begleitet wurden sie von den Teamleitern Benjamin Tonner und Matthis Tradel sowie von Miro Joensuu als Beobachter.">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="news">
+
+	<meta itemprop="name" content="Erste Medaillen für Österreich: IOAA 2026 in Hanoi">
+	<meta itemprop="description" content="Fünf junge Astronomietalente, ein internationaler Wettbewerb und die ersten IOAA-Medaillen für Österreich: Unser Nationalteam kehrt mit einem historischen Erfolg aus Hanoi zurück.
+Die 19. Internationale Olympiade für Astronomie und Astrophysik (IOAA) führte vom 25. September bis zum 5. Oktober 2026 mehr als 300 Jugendliche aus 64 Ländern und Territorien in Hanoi zusammen. Für Österreich traten Lukas Doktor, Simon Spitaler, Moritz Eisl, Michal Rajec und Stefan Winkler an. Begleitet wurden sie von den Teamleitern Benjamin Tonner und Matthis Tradel sowie von Miro Joensuu als Beobachter.">
+	<meta itemprop="wordCount" content="1036">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Erste Medaillen für Österreich: IOAA 2026 in Hanoi">
+	<meta name="twitter:description" content="Fünf junge Astronomietalente, ein internationaler Wettbewerb und die ersten IOAA-Medaillen für Österreich: Unser Nationalteam kehrt mit einem historischen Erfolg aus Hanoi zurück.
+Die 19. Internationale Olympiade für Astronomie und Astrophysik (IOAA) führte vom 25. September bis zum 5. Oktober 2026 mehr als 300 Jugendliche aus 64 Ländern und Territorien in Hanoi zusammen. Für Österreich traten Lukas Doktor, Simon Spitaler, Moritz Eisl, Michal Rajec und Stefan Winkler an. Begleitet wurden sie von den Teamleitern Benjamin Tonner und Matthis Tradel sowie von Miro Joensuu als Beobachter.">
+
+      
+    
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white production">
+
+    
+   
+  
+
+  
+  <header class="cover bg-top" style="background-image: url('https://ioaa-austria.at/images/IOAA_2026/Team_Stage_1.JPG');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns site-nav" role="navigation">
+  <div class="site-nav__inner">
+    <div class="site-nav__bar">
+      <a href="/" class="f3 fw2 hover-white no-underline white-90 dib flex items-center site-nav__brand">
+        
+          <img src="/images/IOAA_Austria_Logo_2.svg" class="w100 mw3" alt="" />
+        
+        IOAA–Austria
+      </a>
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="site-menu"
+        aria-label="Menü öffnen"
+      >
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div id="site-menu" class="site-nav__menu">
+      
+
+      
+        <ul class="site-nav__list pl0 mr3">
+          
+              <li class="list f5 f4-ns fw4 site-nav__item pr3">
+                  <div class="dropdown dropdown--has-children">
+                    <div class="dropdown__trigger">
+                      <a class="hover-white no-underline white-90 site-nav__link" href="/informationen/">
+                        Informationen
+                      </a>
+                      
+                      <button
+                        type="button"
+                        class="dropdown-toggle"
+                        aria-expanded="false"
+                        aria-label="Untermenü Informationen"
+                      >
+                        <span class="dropdown-toggle__icon" aria-hidden="true"></span>
+                      </button>
+                      
+                    </div>
+                    
+                    <div class="dropdown-content">
+                      
+                        <a href="/informationen/ablauf/">Ablauf</a>
+                      
+                        <a href="/informationen/regeln/">Regeln</a>
+                      
+                        <a href="/informationen/lernmaterialien/">Lernmaterialien</a>
+                      
+                        <a href="/informationen/sylabus/">Syllabus</a>
+                      
+                    </div>
+                    
+                  </div>
+              </li>
+          
+              <li class="list f5 f4-ns fw4 site-nav__item pr3">
+                  <div class="dropdown">
+                    <div class="dropdown__trigger">
+                      <a class="hover-white no-underline white-90 site-nav__link" href="/mitmachen/">
+                        Mitmachen
+                      </a>
+                      
+                    </div>
+                    
+                  </div>
+              </li>
+          
+              <li class="list f5 f4-ns fw4 site-nav__item pr3">
+                  <div class="dropdown">
+                    <div class="dropdown__trigger">
+                      <a class="hover-white no-underline white-90 site-nav__link" href="/kontakt/">
+                        Kontakt
+                      </a>
+                      
+                    </div>
+                    
+                  </div>
+              </li>
+          
+              <li class="list f5 f4-ns fw4 site-nav__item pr3">
+                  <div class="dropdown dropdown--has-children">
+                    <div class="dropdown__trigger">
+                      <a class="hover-white no-underline white-90 site-nav__link" href="/news/">
+                        News
+                      </a>
+                      
+                      <button
+                        type="button"
+                        class="dropdown-toggle"
+                        aria-expanded="false"
+                        aria-label="Untermenü News"
+                      >
+                        <span class="dropdown-toggle__icon" aria-hidden="true"></span>
+                      </button>
+                      
+                    </div>
+                    
+                    <div class="dropdown-content">
+                      
+                        <a href="/news/ioaa_2026/">Erste Medaillen für Österreich: IOAA 2026 in Hanoi</a>
+                      
+                        <a href="/news/ceoaa_2026/">Österreich bei der CEOAA 2026 in Zagreb</a>
+                      
+                        <a href="/news/training_2026/">Sommertraining für die internationalen Astronomieolympiaden</a>
+                      
+                        <a href="/news/bundesrunde_2026/">Vorentscheid IOAA 2026</a>
+                      
+                        <a href="/news/ioaa_2025/">Unsere Erfahrung in Indien: IOAA 2025</a>
+                      
+                        <a href="/news/ioaa_2024/">IOAA 2024 - Wir in Brasilien</a>
+                      
+                        <a href="/news/astrocamp/">Vorbereitungskurs IOAA 2024</a>
+                      
+                        <a href="/news/bundesrunde_2024/">Vorentscheid IOAA 2024</a>
+                      
+                        <a href="/news/ioaa_2023/">Wir bei der IOAA 2023</a>
+                      
+                    </div>
+                    
+                  </div>
+              </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    
+    <a href="https://www.instagram.com/ioaa_austria/" target="_blank" rel="noopener" class="instagram ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Instagram link" aria-label="follow on Instagram——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M42.271,26.578v-0.006c0.502,0,1.005,0.01,1.508-0.002  c0.646-0.017,1.172-0.57,1.172-1.217c0-0.963,0-1.927,0-2.89c0-0.691-0.547-1.24-1.236-1.241c-0.961,0-1.922-0.001-2.883,0  c-0.688,0.001-1.236,0.552-1.236,1.243c-0.001,0.955-0.004,1.91,0.003,2.865c0.001,0.143,0.028,0.291,0.073,0.426  c0.173,0.508,0.639,0.82,1.209,0.823C41.344,26.579,41.808,26.578,42.271,26.578z M33,27.817c-3.384-0.002-6.135,2.721-6.182,6.089  c-0.049,3.46,2.72,6.201,6.04,6.272c3.454,0.074,6.248-2.686,6.321-6.043C39.254,30.675,36.462,27.815,33,27.817z M21.046,31.116  v0.082c0,4.515-0.001,9.03,0,13.545c0,0.649,0.562,1.208,1.212,1.208c7.16,0.001,14.319,0.001,21.479,0  c0.656,0,1.215-0.557,1.215-1.212c0.001-4.509,0-9.02,0-13.528v-0.094h-2.912c0.411,1.313,0.537,2.651,0.376,4.014  c-0.161,1.363-0.601,2.631-1.316,3.803s-1.644,2.145-2.779,2.918c-2.944,2.006-6.821,2.182-9.946,0.428  c-1.579-0.885-2.819-2.12-3.685-3.713c-1.289-2.373-1.495-4.865-0.739-7.451C22.983,31.116,22.021,31.116,21.046,31.116z   M45.205,49.255c0.159-0.026,0.318-0.049,0.475-0.083c1.246-0.265,2.264-1.304,2.508-2.557c0.025-0.137,0.045-0.273,0.067-0.409  V21.794c-0.021-0.133-0.04-0.268-0.065-0.401c-0.268-1.367-1.396-2.428-2.78-2.618c-0.058-0.007-0.113-0.02-0.17-0.03H20.761  c-0.147,0.027-0.296,0.047-0.441,0.08c-1.352,0.308-2.352,1.396-2.545,2.766c-0.008,0.057-0.02,0.114-0.029,0.171V46.24  c0.028,0.154,0.05,0.311,0.085,0.465c0.299,1.322,1.427,2.347,2.77,2.52c0.064,0.008,0.13,0.021,0.195,0.03H45.205z M33,64  C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+  
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="mw7 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        NEWS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Erste Medaillen für Österreich: IOAA 2026 in Hanoi</h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray w-100" style="text-align: justify;"><p>Fünf junge Astronomietalente, ein internationaler Wettbewerb und die ersten IOAA-Medaillen für Österreich: Unser Nationalteam kehrt mit einem historischen Erfolg aus Hanoi zurück.</p>
+<p>Die 19. <a href="https://www.ioaa2026.vn/en">Internationale Olympiade für Astronomie und Astrophysik (IOAA)</a> führte vom 25. September bis zum 5. Oktober 2026 mehr als 300 Jugendliche aus 64 Ländern und Territorien in Hanoi zusammen. Für Österreich traten Lukas Doktor, Simon Spitaler, Moritz Eisl, Michal Rajec und Stefan Winkler an. Begleitet wurden sie von den Teamleitern Benjamin Tonner und Matthis Tradel sowie von Miro Joensuu als Beobachter.</p>
+<figure><img src="/images/IOAA_2026/Team_Opening_Ceremony.JPG"><figcaption>
+			<h4>V. l. n. r. Miro Joensuu, Benjamin Tonner, Simon Spitaler, Moritz Eisl, Lukas Doktor, Michal Rajec, Stefan Winkler und Matthis Tradel</h4>
+		</figcaption>
+</figure>
+
+<p>Besonders freuen wir uns über zwei Bronzemedaillen: Lukas Doktor von der HTL Eisenstadt und Simon Spitaler vom Erzbischöflichen Gymnasium Hollabrunn gewannen die ersten Medaillen für Österreich in der Geschichte der IOAA. Wir gratulieren dem gesamten Team zu seinem Einsatz, seinem Zusammenhalt und seinen Leistungen auf internationaler Bühne.</p>
+<div style="display: flex; justify-content: center; align-items: flex-start; width: 90%; gap: 16px; margin: 0 auto;">
+    <img src="/images/IOAA_2026/Bronze_Lukas_Doktor.JPG" alt="Lukas Doktor" style="width: 50%; height: auto;">
+    <img src="/images/IOAA_2026/Bronze_Simon_Spitaler.JPG" alt="Simon Spitaler" style="width: 50%; height: auto;">
+</div>
+<h4 id="lukas-doktor-und-simon-spitaler-gewinnen-bronze">Lukas Doktor und Simon Spitaler gewinnen Bronze</h4>
+<h2 id="ein-jahr-vorbereitung-für-elf-besondere-tage">Ein Jahr Vorbereitung für elf besondere Tage</h2>
+<p>Hinter dieser Reise stand eine intensive Vorbereitung: Auf die <a href="/news/bundesrunde_2026/">nationalen Auswahlrunden</a> folgten Übungsaufgaben und sechs <a href="/news/training_2026/">Online-Trainingstage</a> im Sommer. Fachliche Unterstützung erhielten die Jugendlichen unter anderem von IOAA Germany und der Johannes-Kepler-Sternwarte Linz. Die Teilnahme an der <a href="/news/ceoaa_2026/">Zentraleuropäischen Astronomie- und Astrophysikolympiade in Zagreb</a> bot Anfang September zusätzliche Wettbewerbserfahrung. In Hanoi konnten die fünf schließlich zeigen, was sie sich über das Jahr erarbeitet hatten.</p>
+<figure><img src="/images/IOAA_2026/Reise_7.jpg"><figcaption>
+			<h4>Ho-Chi-Minh-Mausoleum in Hanoi</h4>
+		</figcaption>
+</figure>
+
+<p>Am 26. September eröffnete die Feier an der Phenikaa University die Olympiade. IOAA-Präsident Aniket Sule betonte den Wert der Freundschaften, die bei einer solchen Begegnung entstehen und über die einzelnen Prüfungen hinaus Bestand haben. Kulturelle Darbietungen begleiteten den Auftakt. Bevor sich die Teamleiter von den Schüler:innen verabschiedeten und diese ihre elektronischen Geräte abgaben, war uns eine Botschaft besonders wichtig: füreinander da zu sein, Menschen aus anderen Ländern kennenzulernen und mit Freude an die Aufgaben heranzugehen. Im Wettbewerb sollte die Konzentration der Astronomie und Physik gelten. Unser Stolz auf das Team hing nicht von einer Medaille ab.</p>
+<figure><img src="/images/IOAA_2026/Er%C3%B6ffnung.webp"><figcaption>
+			<h4>Teilnehmer aller Länder bei der Eröffnungszeremonie</h4>
+		</figcaption>
+</figure>
+
+<h2 id="vom-interstellaren-objekt-bis-zum-sternenhimmel">Vom interstellaren Objekt bis zum Sternenhimmel</h2>
+<p>Das Programm umfasste vier Einzelprüfungen sowie einen separat gewerteten internationalen Teamwettbewerb. Den Auftakt bildete am 28. September die fünfstündige Theorieprüfung. Die Aufgaben reichten von der Bahn eines interstellaren Objekts über Sternwinde und Gravitationslinsen bis zur inneren Struktur Jupiters und zur Bestimmung der Masse eines supermassereichen Schwarzen Lochs. Gefragt waren physikalisches Verständnis, mathematische Ausdauer und die Fähigkeit, vertraute Grundlagen auf ungewohnte Situationen anzuwenden.</p>
+<p>Am 29. September folgten der Teamwettbewerb und die Teleskoprunde, am 1. Oktober die Datenanalyse und am 2. Oktober die Planetariumsprüfung. Damit verlangte die IOAA ein breites Spektrum an Fähigkeiten: rechnen und modellieren, Messdaten auswerten, sich am Himmel orientieren und mit astronomischen Instrumenten umgehen.</p>
+<figure><img src="/images/IOAA_2026/Planetarium_Innen.jpg"><figcaption>
+			<h4>Das für die IOAA errichtete Universitätsplanetarium</h4>
+		</figcaption>
+</figure>
+
+<h2 id="die-arbeit-hinter-den-aufgaben">Die Arbeit hinter den Aufgaben</h2>
+<p>Auch für die Teamleiter waren es intensive Tage. Vor den Prüfungen diskutierten die Delegationen mit dem wissenschaftlichen Komitee Aufgabenstellungen, Lösungen und Bewertungsschemata. Anschließend mussten die Aufgaben sorgfältig übersetzt, kontrolliert und für die Schüler:innen zusammengestellt werden. Oft reichte die Arbeit bis spät in die Nacht, bevor am nächsten Morgen bereits die nächsten Besprechungen anstanden.</p>
+<figure><img src="/images/IOAA_2026/Teamleader_1.jpg"><figcaption>
+			<h4>Die Teamleiter nach der Übersetzung der Theorierunde</h4>
+		</figcaption>
+</figure>
+
+<p>Schon eine einfache Größenordnung zeigt den Aufwand: Die englische Theorieunterlage umfasst 22 Seiten. Bei fünf Schüler:innen und zwei gleich langen Sprachfassungen wären das 220 bedruckte Seiten allein für diese Unterlage, noch ohne zusätzliche Arbeits- und Antwortblätter. Nach dem Druck wurden die Prüfungsmappen kontrolliert, unterschrieben und gesichert. Nach den Prüfungen folgte die Durchsicht der Lösungen und die Besprechung der Bewertung mit der Jury, damit nachvollziehbare Lösungswege und Teilergebnisse angemessen berücksichtigt wurden.</p>
+<figure><img src="/images/IOAA_2026/Teamleader_Besprechung.jpg"><figcaption>
+			<h4>Besprechung der Aufgaben im Board</h4>
+		</figcaption>
+</figure>
+
+<h2 id="freundschaft-kultur-und-gemeinsame-erinnerungen">Freundschaft, Kultur und gemeinsame Erinnerungen</h2>
+<p>Zwischen den Prüfungen wurde Hanoi zu einem Treffpunkt junger Menschen, die dieselbe Begeisterung für das Universum teilen. Bei Billard, Tischfußball und Brettspielen entstanden Gespräche und Freundschaften über Ländergrenzen hinweg. Der gemeinsame Ausgangspunkt war die Astronomie; bald ging es ebenso um Musik, Schule, Alltag und die unterschiedlichen Lebenswelten der Jugendlichen.</p>
+<figure><img src="/images/IOAA_2026/Reise_5.JPG"><figcaption>
+			<h4>Das Team probiert vietnamesisches Essen</h4>
+		</figcaption>
+</figure>
+
+<p>Zum Exkursionsprogramm gehörten die Zitadelle Thăng Long, der Literaturtempel und das Töpferdorf Bát Tràng. Sie eröffneten Einblicke in die Geschichte und Kultur Vietnams. Beim Kulturabend am 2. Oktober teilten die Teilnehmer:innen Tänze und Lieder aus ihren Heimatländern. Auf der Bühne und im Publikum wurde spürbar, wie aus vielen einzelnen Delegationen eine Gemeinschaft geworden war.</p>
+<figure><img src="/images/IOAA_2026/Kulturabend_1.JPG"><figcaption>
+			<h4>Performance beim Kulturabend</h4>
+		</figcaption>
+</figure>
+
+<h2 id="zwei-medaillen-und-ein-erfolg-für-das-ganze-team">Zwei Medaillen und ein Erfolg für das ganze Team</h2>
+<p>Wie anspruchsvoll der Wettbewerb war, zeigt ein Blick auf die Ergebnisse: Der Median lag bei rund 210 von 600 möglichen Punkten, also bei etwa 35 Prozent. Lukas und Simon erreichten jeweils rund 250 Punkte und lagen damit deutlich darüber. Diese gerundeten Werte veranschaulichen, dass bei einer Olympiade auch eine weit von der Maximalpunktzahl entfernte Leistung eine internationale Auszeichnung verdienen kann.</p>
+<p>Die Medaillengrenzen orientieren sich an der Punkteverteilung. Als Referenz dient der kleinere Wert aus dem Median und der Hälfte der erreichbaren Punkte. Die regulären Richtwerte liegen für Bronze bei dieser Referenz, für Silber beim 1,3-Fachen und für Gold beim 1,6-Fachen. Die genauen Grenzen werden nach den Statuten anhand benachbarter Ergebnisse festgelegt; sie sind daher keine starren Prozentgrenzen.</p>
+<p>Die Teamleiter kannten die Ergebnisse bereits vor der offiziellen Bekanntgabe und behielten sie bis zur Abschlussfeier für sich. Am 4. Oktober wurde aus dieser stillen Vorfreude ein gemeinsamer Jubel: Lukas und Simon nahmen ihre Bronzemedaillen entgegen. Unsere Schüler:innen mit der österreichischen Flagge auf der Bühne zu sehen, war ein besonderer Abschluss dieser Reise. Die Medaillen würdigen herausragende Leistungen; die Erfahrungen und Freundschaften nehmen alle fünf mit nach Hause.</p>
+<figure><img src="/images/IOAA_2026/Team_Closing_Ceremony.JPG"><figcaption>
+			<h4>Das Team feiert seinen Erfolg nach der Olympiade</h4>
+		</figcaption>
+</figure>
+
+<h2 id="danke-an-alle-die-diesen-weg-möglich-machen">Danke an alle, die diesen Weg möglich machen</h2>
+<p>Unser herzlicher Dank gilt <a href="https://teleskop-austria.at">Teleskop-Austria</a>, der <a href="https://www.ffg.at/">Österreichischen Forschungsförderungsgesellschaft (FFG)</a> und dem <a href="https://www.bmimi.gv.at/">Bundesministerium für Innovation, Mobilität und Infrastruktur</a>. Ihre Unterstützung hilft dabei, jungen Menschen unabhängig vom normalen Schulangebot eine intensive Auseinandersetzung mit Astronomie und die Teilnahme an internationalen Wettbewerben zu ermöglichen.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; width: 100%; gap: 30px; margin: 0 auto; text-align: center;">
+    <a href="https://teleskop-austria.at" target="_blank" style="flex-basis: 100%; max-width: 23%;"><img src="/images/teleskop-austria_logo-PRESS.png" alt="Teleskop-Austria" style="width: 100%;"></a>
+    <a href="https://www.ffg.at/" target="_blank" style="flex-basis: 100%; max-width: 33%;"><img src="/images/FFG_Logo_DE_CMYK.png" alt="FFG" style="width: 100%;"></a>
+    <a href="https://www.bmimi.gv.at/" target="_blank" style="flex-basis: 100%; max-width: 33%;"><img src="/images/Logo_BMIMI_Gefoerdert_DE_SRGB.png" alt="BMIMI" style="width: 100%;"></a>
+</div>
+<figure><img src="/images/IOAA_2026/Sponsoren_Opening_Ceremony.jpg"><figcaption>
+			<h4>Wir danken unseren Sponsoren!</h4>
+		</figcaption>
+</figure>
+
+<p>Ebenso danken wir unserem Organisationsteam: Miro Joensuu als Obmann, IOAA-Beobachter und CEOAA-Teamleiter; Benjamin Tonner als Wettbewerbskoordinator, Vereinskassierer und IOAA-Teamleiter; Matthis Tradel als IOAA-Teamleiter und Mitorganisator; Lukas Gabriel als Mitorganisator und CEOAA-Teamleiter sowie Alëna Galunova für ihre Mitarbeit an der Organisation. Der Johannes-Kepler-Sternwarte Linz und unseren weiteren Trainern danken wir für ihre Zeit, ihr Fachwissen und die engagierte Begleitung der Schüler:innen.</p>
+<figure><img src="/images/IOAA_2026/Poster.JPG"><figcaption>
+			<h4>Internationale Freundschaften eingefangen</h4>
+		</figcaption>
+</figure>
+
+<h2 id="nimm-an-der-auswahl-2027-teil-und-sei-nächstes-jahr-teil-unseres-teams">Nimm an der <a href="/mitmachen/">Auswahl 2027</a> teil und sei nächstes Jahr Teil unseres Teams!</h2>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-100 mt5 mb5">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between items-center">
+    
+    <div class="flex items-center">
+      <a class="f4 fw4 hover-white no-underline white-70 dn dib pv2 ph3" href="https://ioaa-austria.at/">
+        &copy;  IOAA–Austria 2026 
+      </a>
+      <a href="https://ioaa-austria.at/">
+        
+          <img src="/images/IOAA_Austria_Logo_2.svg" class="mr3" style="max-height: 50px; max-width: 100%;" />
+        
+      </a>
+    </div>
+
+    
+    <div class="flex items-center justify-center">
+      <p class="white-70 f4 mr3">Arbeitsgruppe der</p>
+      <a href="https://www.oegaa.at" target="_blank">
+        <img src="/images/oegaa_logo.png" alt="Centered Image" style="max-height: 40px; width: auto;">
+      </a>
+    </div>
+
+    
+    <div class="flex items-center">
+      
+<div class="ananke-socials">
+  
+    
+    <a href="https://www.instagram.com/ioaa_austria/" target="_blank" rel="noopener" class="instagram ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Instagram link" aria-label="follow on Instagram——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M42.271,26.578v-0.006c0.502,0,1.005,0.01,1.508-0.002  c0.646-0.017,1.172-0.57,1.172-1.217c0-0.963,0-1.927,0-2.89c0-0.691-0.547-1.24-1.236-1.241c-0.961,0-1.922-0.001-2.883,0  c-0.688,0.001-1.236,0.552-1.236,1.243c-0.001,0.955-0.004,1.91,0.003,2.865c0.001,0.143,0.028,0.291,0.073,0.426  c0.173,0.508,0.639,0.82,1.209,0.823C41.344,26.579,41.808,26.578,42.271,26.578z M33,27.817c-3.384-0.002-6.135,2.721-6.182,6.089  c-0.049,3.46,2.72,6.201,6.04,6.272c3.454,0.074,6.248-2.686,6.321-6.043C39.254,30.675,36.462,27.815,33,27.817z M21.046,31.116  v0.082c0,4.515-0.001,9.03,0,13.545c0,0.649,0.562,1.208,1.212,1.208c7.16,0.001,14.319,0.001,21.479,0  c0.656,0,1.215-0.557,1.215-1.212c0.001-4.509,0-9.02,0-13.528v-0.094h-2.912c0.411,1.313,0.537,2.651,0.376,4.014  c-0.161,1.363-0.601,2.631-1.316,3.803s-1.644,2.145-2.779,2.918c-2.944,2.006-6.821,2.182-9.946,0.428  c-1.579-0.885-2.819-2.12-3.685-3.713c-1.289-2.373-1.495-4.865-0.739-7.451C22.983,31.116,22.021,31.116,21.046,31.116z   M45.205,49.255c0.159-0.026,0.318-0.049,0.475-0.083c1.246-0.265,2.264-1.304,2.508-2.557c0.025-0.137,0.045-0.273,0.067-0.409  V21.794c-0.021-0.133-0.04-0.268-0.065-0.401c-0.268-1.367-1.396-2.428-2.78-2.618c-0.058-0.007-0.113-0.02-0.17-0.03H20.761  c-0.147,0.027-0.296,0.047-0.441,0.08c-1.352,0.308-2.352,1.396-2.545,2.766c-0.008,0.057-0.02,0.114-0.029,0.171V46.24  c0.028,0.154,0.05,0.311,0.085,0.465c0.299,1.322,1.427,2.347,2.77,2.52c0.064,0.008,0.13,0.021,0.195,0.03H45.205z M33,64  C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
