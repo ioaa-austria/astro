@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en-us"ZgotmplZ>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Ankreuztest | IOAA–Austria</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Fülle jetzt den Ankreuztest aus und melde dich zum IOAA-Austria Bewerb 2027 an. Du hast 15 Minuten Zeit und mehr Aufgaben, als sich in dieser Zeit lösen lassen. Leichte Aufgaben zählen 1 Punkt, mittlere 2 und schwere 3. Jede Aufgabe hat genau eine richtige Antwort. Unbeantwortete und falsche Aufgaben geben keine Punkte.
+Pro Name und pro E-Mail-Adresse ist nur ein Start möglich. Die Aufgaben sollen allein bearbeitet werden, ansonsten sind alle Hilfsmittel zulässig.">
+    <meta name="generator" content="Hugo 0.163.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.297335c18c03763b8ef67eba492828488388f58a4d0f0ac285ec08f5e6c3b6b7.css" >
+
+
+
+    
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var desktopQuery = window.matchMedia('(min-width: 60em)');
+
+     
+    var nav = document.querySelector('.site-nav');
+    if (nav) {
+      var toggle = nav.querySelector('.nav-toggle');
+      var menu = nav.querySelector('#site-menu');
+
+      if (toggle && menu) {
+        function closeSubmenus(except) {
+          nav.querySelectorAll('.dropdown.is-open').forEach(function (dropdown) {
+            if (except && dropdown === except) return;
+            dropdown.classList.remove('is-open');
+            var btn = dropdown.querySelector('.dropdown-toggle');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+          });
+        }
+
+        function setOpen(open) {
+          nav.classList.toggle('is-open', open);
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+          if (!open) closeSubmenus();
+        }
+
+        toggle.addEventListener('click', function () {
+          setOpen(!nav.classList.contains('is-open'));
+        });
+
+        nav.querySelectorAll('.dropdown-toggle').forEach(function (btn) {
+          btn.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            if (desktopQuery.matches) return;
+
+            var dropdown = btn.closest('.dropdown');
+            var willOpen = !dropdown.classList.contains('is-open');
+            closeSubmenus(willOpen ? dropdown : null);
+            dropdown.classList.toggle('is-open', willOpen);
+            btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+          });
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape') {
+            if (nav.querySelector('.dropdown.is-open')) {
+              closeSubmenus();
+            } else {
+              setOpen(false);
+            }
+          }
+        });
+
+        document.addEventListener('click', function (event) {
+          if (desktopQuery.matches) return;
+          if (!nav.contains(event.target)) {
+            closeSubmenus();
+            return;
+          }
+          if (!event.target.closest('.dropdown')) {
+            closeSubmenus();
+          }
+        });
+
+        window.addEventListener('resize', function () {
+          if (desktopQuery.matches) {
+            setOpen(false);
+            closeSubmenus();
+          }
+        });
+      }
+    }
+
+     
+    var timelines = document.querySelectorAll('[data-year-timeline]');
+    if (!timelines.length) return;
+
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var search = window.location.search;
+    var host = window.location.hostname;
+    var localPreview = host === 'localhost' || host === '127.0.0.1';
+    
+    
+    var forceMotion =
+      /(?:\?|&)motion=1(?:&|$)/.test(search) ||
+      (localPreview && reduceMotion && !/(?:\?|&)motion=0(?:&|$)/.test(search));
+    var animate = !reduceMotion || forceMotion;
+    if (forceMotion) document.documentElement.classList.add('force-motion');
+
+    var heroButton = document.querySelector('[data-hero-button]');
+    var heroPrompt = document.querySelector('[data-hero-prompt]');
+
+    function show(el) {
+      if (el) el.classList.add('is-visible');
+    }
+
+    function startHeroSequence(timeline) {
+      if (timeline.classList.contains('is-visible')) return;
+
+      if (!animate) {
+        show(heroButton);
+        show(timeline);
+        show(heroPrompt);
+        return;
+      }
+
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          
+          show(heroButton);
+          setTimeout(function () {
+            show(timeline);
+            setTimeout(function () {
+              show(heroPrompt);
+            }, 1400);
+          }, 320);
+        });
+      });
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      timelines.forEach(startHeroSequence);
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        startHeroSequence(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+
+    timelines.forEach(function (timeline) {
+      observer.observe(timeline);
+    });
+  });
+</script>
+
+
+    
+      
+<link rel="shortcut icon" href="/images/IOAA_Austria_Logo_2.svg" type="image/x-icon" />
+
+
+    
+
+    
+
+    <meta property="og:url" content="https://ioaa-austria.at/mitmachen/ankreuztest/">
+	<meta property="og:site_name" content="IOAA–Austria">
+	<meta property="og:title" content="Ankreuztest">
+	<meta property="og:description" content="Fülle jetzt den Ankreuztest aus und melde dich zum IOAA-Austria Bewerb 2027 an. Du hast 15 Minuten Zeit und mehr Aufgaben, als sich in dieser Zeit lösen lassen. Leichte Aufgaben zählen 1 Punkt, mittlere 2 und schwere 3. Jede Aufgabe hat genau eine richtige Antwort. Unbeantwortete und falsche Aufgaben geben keine Punkte.
+Pro Name und pro E-Mail-Adresse ist nur ein Start möglich. Die Aufgaben sollen allein bearbeitet werden, ansonsten sind alle Hilfsmittel zulässig.">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="mitmachen">
+
+	<meta itemprop="name" content="Ankreuztest">
+	<meta itemprop="description" content="Fülle jetzt den Ankreuztest aus und melde dich zum IOAA-Austria Bewerb 2027 an. Du hast 15 Minuten Zeit und mehr Aufgaben, als sich in dieser Zeit lösen lassen. Leichte Aufgaben zählen 1 Punkt, mittlere 2 und schwere 3. Jede Aufgabe hat genau eine richtige Antwort. Unbeantwortete und falsche Aufgaben geben keine Punkte.
+Pro Name und pro E-Mail-Adresse ist nur ein Start möglich. Die Aufgaben sollen allein bearbeitet werden, ansonsten sind alle Hilfsmittel zulässig.">
+	<meta itemprop="wordCount" content="73">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Ankreuztest">
+	<meta name="twitter:description" content="Fülle jetzt den Ankreuztest aus und melde dich zum IOAA-Austria Bewerb 2027 an. Du hast 15 Minuten Zeit und mehr Aufgaben, als sich in dieser Zeit lösen lassen. Leichte Aufgaben zählen 1 Punkt, mittlere 2 und schwere 3. Jede Aufgabe hat genau eine richtige Antwort. Unbeantwortete und falsche Aufgaben geben keine Punkte.
+Pro Name und pro E-Mail-Adresse ist nur ein Start möglich. Die Aufgaben sollen allein bearbeitet werden, ansonsten sind alle Hilfsmittel zulässig.">
+
+      
+    
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white production">
+
+    
+  
+
+  
+  <header class="cover bg-top" style="background-image: url('https://ioaa-austria.at/images/Victor_Hugo-Hunchback.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns site-nav" role="navigation">
+  <div class="site-nav__inner">
+    <div class="site-nav__bar">
+      <a href="/" class="f3 fw2 hover-white no-underline white-90 dib flex items-center site-nav__brand">
+        
+          <img src="/images/IOAA_Austria_Logo_2.svg" class="w100 mw3" alt="" />
+        
+        IOAA–Austria
+      </a>
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="site-menu"
+        aria-label="Menü öffnen"
+      >
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div id="site-menu" class="site-nav__menu">
+      
+
+      
+        <ul class="site-nav__list pl0 mr3">
+          
+              <li class="list f5 f4-ns fw4 site-nav__item pr3">
+                  <div class="dropdown dropdown--has-children">
+                    <div class="dropdown__trigger">
+                      <a class="hover-white no-underline white-90 site-nav__link" href="/informationen/">
+                        Informationen
+                      </a>
+                      
+                      <button
+                        type="button"
+                        class="dropdown-toggle"
+                        aria-expanded="false"
+                        aria-label="Untermenü Informationen"
+                      >
+                        <span class="dropdown-toggle__icon" aria-hidden="true"></span>
+                      </button>
+                      
+                    </div>
+                    
+                    <div class="dropdown-content">
+                      
+                        <a href="/informationen/ablauf/">Ablauf</a>
+                      
+                        <a href="/informationen/regeln/">Regeln</a>
+                      
+                        <a href="/informationen/lernmaterialien/">Lernmaterialien</a>
+                      
+                        <a href="/informationen/sylabus/">Syllabus</a>
+                      
+                    </div>
+                    
+                  </div>
+              </li>
+          
+              <li class="list f5 f4-ns fw4 site-nav__item pr3">
+                  <div class="dropdown">
+                    <div class="dropdown__trigger">
+                      <a class="hover-white no-underline white-90 site-nav__link" href="/mitmachen/">
+                        Mitmachen
+                      </a>
+                      
+                    </div>
+                    
+                  </div>
+              </li>
+          
+              <li class="list f5 f4-ns fw4 site-nav__item pr3">
+                  <div class="dropdown">
+                    <div class="dropdown__trigger">
+                      <a class="hover-white no-underline white-90 site-nav__link" href="/kontakt/">
+                        Kontakt
+                      </a>
+                      
+                    </div>
+                    
+                  </div>
+              </li>
+          
+              <li class="list f5 f4-ns fw4 site-nav__item pr3">
+                  <div class="dropdown dropdown--has-children">
+                    <div class="dropdown__trigger">
+                      <a class="hover-white no-underline white-90 site-nav__link" href="/news/">
+                        News
+                      </a>
+                      
+                      <button
+                        type="button"
+                        class="dropdown-toggle"
+                        aria-expanded="false"
+                        aria-label="Untermenü News"
+                      >
+                        <span class="dropdown-toggle__icon" aria-hidden="true"></span>
+                      </button>
+                      
+                    </div>
+                    
+                    <div class="dropdown-content">
+                      
+                        <a href="/news/ioaa_2026/">Erste Medaillen für Österreich: IOAA 2026 in Hanoi</a>
+                      
+                        <a href="/news/ceoaa_2026/">Österreich bei der CEOAA 2026 in Zagreb</a>
+                      
+                        <a href="/news/training_2026/">Sommertraining für die internationalen Astronomieolympiaden</a>
+                      
+                        <a href="/news/bundesrunde_2026/">Vorentscheid IOAA 2026</a>
+                      
+                        <a href="/news/ioaa_2025/">Unsere Erfahrung in Indien: IOAA 2025</a>
+                      
+                        <a href="/news/ioaa_2024/">IOAA 2024 - Wir in Brasilien</a>
+                      
+                        <a href="/news/astrocamp/">Vorbereitungskurs IOAA 2024</a>
+                      
+                        <a href="/news/bundesrunde_2024/">Vorentscheid IOAA 2024</a>
+                      
+                        <a href="/news/ioaa_2023/">Wir bei der IOAA 2023</a>
+                      
+                    </div>
+                    
+                  </div>
+              </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    
+    <a href="https://www.instagram.com/ioaa_austria/" target="_blank" rel="noopener" class="instagram ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Instagram link" aria-label="follow on Instagram——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M42.271,26.578v-0.006c0.502,0,1.005,0.01,1.508-0.002  c0.646-0.017,1.172-0.57,1.172-1.217c0-0.963,0-1.927,0-2.89c0-0.691-0.547-1.24-1.236-1.241c-0.961,0-1.922-0.001-2.883,0  c-0.688,0.001-1.236,0.552-1.236,1.243c-0.001,0.955-0.004,1.91,0.003,2.865c0.001,0.143,0.028,0.291,0.073,0.426  c0.173,0.508,0.639,0.82,1.209,0.823C41.344,26.579,41.808,26.578,42.271,26.578z M33,27.817c-3.384-0.002-6.135,2.721-6.182,6.089  c-0.049,3.46,2.72,6.201,6.04,6.272c3.454,0.074,6.248-2.686,6.321-6.043C39.254,30.675,36.462,27.815,33,27.817z M21.046,31.116  v0.082c0,4.515-0.001,9.03,0,13.545c0,0.649,0.562,1.208,1.212,1.208c7.16,0.001,14.319,0.001,21.479,0  c0.656,0,1.215-0.557,1.215-1.212c0.001-4.509,0-9.02,0-13.528v-0.094h-2.912c0.411,1.313,0.537,2.651,0.376,4.014  c-0.161,1.363-0.601,2.631-1.316,3.803s-1.644,2.145-2.779,2.918c-2.944,2.006-6.821,2.182-9.946,0.428  c-1.579-0.885-2.819-2.12-3.685-3.713c-1.289-2.373-1.495-4.865-0.739-7.451C22.983,31.116,22.021,31.116,21.046,31.116z   M45.205,49.255c0.159-0.026,0.318-0.049,0.475-0.083c1.246-0.265,2.264-1.304,2.508-2.557c0.025-0.137,0.045-0.273,0.067-0.409  V21.794c-0.021-0.133-0.04-0.268-0.065-0.401c-0.268-1.367-1.396-2.428-2.78-2.618c-0.058-0.007-0.113-0.02-0.17-0.03H20.761  c-0.147,0.027-0.296,0.047-0.441,0.08c-1.352,0.308-2.352,1.396-2.545,2.766c-0.008,0.057-0.02,0.114-0.029,0.171V46.24  c0.028,0.154,0.05,0.311,0.085,0.465c0.299,1.322,1.427,2.347,2.77,2.52c0.064,0.008,0.13,0.021,0.195,0.03H45.205z M33,64  C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+  
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  
+  <article class="mw7 center ph3 ankreuz">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+        MITMACHEN
+      </aside>
+      <h1 class="f1 athelas mt3 mb1">Ankreuztest</h1>
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray w-100 ankreuz-copy">
+      <p>Fülle jetzt den Ankreuztest aus und melde dich zum IOAA-Austria Bewerb 2027 an. Du hast 15 Minuten Zeit und mehr Aufgaben, als sich in dieser Zeit lösen lassen. Leichte Aufgaben zählen 1 Punkt, mittlere 2 und schwere 3. Jede Aufgabe hat genau eine richtige Antwort. Unbeantwortete und falsche Aufgaben geben keine Punkte.</p>
+<p>Pro Name und pro E-Mail-Adresse ist nur ein Start möglich. Die Aufgaben sollen allein bearbeitet werden, ansonsten sind alle Hilfsmittel zulässig.</p>
+
+    </div>
+
+    <noscript>
+      <p class="ankreuz-status">Zum Starten des Tests muss JavaScript aktiv sein.</p>
+    </noscript>
+    <div id="ankreuztest-root"></div>
+    <section id="ankreuztest-histogram" class="ankreuz-hist" hidden>
+      <h2 class="f3 athelas mt4 mb2">Verteilung der bisherigen Ergebnisse</h2>
+      <div class="ankreuz-hist__chart"></div>
+    </section>
+
+    <div id="ankreuztest-config" hidden>{"durationText":"15 Minuten","endpoint":"https://script.google.com/macros/s/AKfycbwiK1HX3bEjj3IHcltycMAHx5ipsr9D8dhWGNQeOJ7twA_33VY6Xsyzvr4BqF_X1iDa/exec","page":"home","resultHtml":"Du hast {{score}} Punkte erreicht. Unzufrieden mit dem Ergebnis? Nutze die Chance bei \u003ca href=\"https://www.instagram.com/ioaa_austria/\"\u003eAstronomie im Advent\u003c/a\u003e um aufzuholen!","sittingURL":"/mitmachen/ankreuztest/sitzung/"}</div>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"></script>
+    <script defer src="/js/ankreuztest.js"></script>
+  </article>
+  <style>
+  .ankreuz-status { font-family: Georgia, serif; }
+  .ankreuz-error { color: #9b1c1c; }
+  .ankreuz-timer {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #f4f4f4;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    font-size: 2rem;
+    padding: 0.4rem 0;
+  }
+  .ankreuz-timer.is-late { color: #9b1c1c; }
+  .ankreuz-choice {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+    background: #eee;
+    cursor: pointer;
+  }
+  .ankreuz-choice.is-selected { outline: 2px solid #111; background: #fff; }
+  .ankreuz-choice p { margin: 0; }
+  .ankreuz-stem p { margin-top: 0; }
+  .ankreuz-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .ankreuz-actions button { width: auto; }
+  .ankreuz-actions button,
+  #ankreuz-form button { cursor: pointer; }
+  .ankreuz-actions button:disabled,
+  #ankreuz-form button:disabled { cursor: default; }
+  button.ankreuz-secondary,
+  button.ankreuz-secondary:hover,
+  button.ankreuz-secondary:focus {
+    background-color: #eee;
+    color: #111;
+  }
+  .ankreuz-confirm {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(17, 17, 17, 0.45);
+  }
+  .ankreuz-confirm__box { background: #fff; max-width: 24rem; width: 100%; padding: 1.5rem; }
+  .ankreuz-hist__chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.4rem;
+    min-height: 10rem;
+  }
+  .ankreuz-col { flex: 1; min-width: 0; text-align: center; font-family: Helvetica, Arial, sans-serif; font-size: 0.75rem; overflow-wrap: anywhere; }
+  .ankreuz-bar { background: #111; width: 100%; min-height: 2px; }
+  .ankreuz-check { display: flex; gap: 0.6rem; align-items: flex-start; }
+  .ankreuz-check,
+  .ankreuz-check input { cursor: pointer; }
+  .ankreuz,
+  .ankreuz input,
+  .ankreuz button,
+  .ankreuz-confirm,
+  .ankreuz-confirm * { box-sizing: border-box; }
+  .ankreuz input,
+  .ankreuz button { max-width: 100%; }
+  .ankreuz-copy { overflow-wrap: break-word; text-align: start; }
+  .ankreuz img { max-width: 100%; height: auto; }
+  .ankreuz-stem,
+  .ankreuz-choice div,
+  .ankreuz-check span { min-width: 0; overflow-wrap: break-word; }
+  .katex-display { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+  .ankreuz-sitting { min-height: 100vh; padding-top: 0.75rem; padding-bottom: 2.5rem; }
+  main:has(.ankreuz-sitting) { padding-bottom: 0; }
+  @media (min-width: 40rem) {
+    .ankreuz-copy { text-align: justify; }
+  }
+  @media (max-width: 30rem) {
+    header.cover > .bg-black-60 > .pv6 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+    .ankreuz h1 { font-size: 2.25rem; }
+    .ankreuz-timer { font-size: 1.5rem; letter-spacing: 0.04em; }
+    .ankreuz-actions { flex-direction: column; }
+    .ankreuz-actions button { width: 100%; }
+    .ankreuz-confirm__box { padding: 1.25rem; }
+  }
+</style>
+
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between items-center">
+    
+    <div class="flex items-center">
+      <a class="f4 fw4 hover-white no-underline white-70 dn dib pv2 ph3" href="https://ioaa-austria.at/">
+        &copy;  IOAA–Austria 2026 
+      </a>
+      <a href="https://ioaa-austria.at/">
+        
+          <img src="/images/IOAA_Austria_Logo_2.svg" class="mr3" style="max-height: 50px; max-width: 100%;" />
+        
+      </a>
+    </div>
+
+    
+    <div class="flex items-center justify-center">
+      <p class="white-70 f4 mr3">Arbeitsgruppe der</p>
+      <a href="https://www.oegaa.at" target="_blank">
+        <img src="/images/oegaa_logo.png" alt="Centered Image" style="max-height: 40px; width: auto;">
+      </a>
+    </div>
+
+    
+    <div class="flex items-center">
+      
+<div class="ananke-socials">
+  
+    
+    <a href="https://www.instagram.com/ioaa_austria/" target="_blank" rel="noopener" class="instagram ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Instagram link" aria-label="follow on Instagram——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M42.271,26.578v-0.006c0.502,0,1.005,0.01,1.508-0.002  c0.646-0.017,1.172-0.57,1.172-1.217c0-0.963,0-1.927,0-2.89c0-0.691-0.547-1.24-1.236-1.241c-0.961,0-1.922-0.001-2.883,0  c-0.688,0.001-1.236,0.552-1.236,1.243c-0.001,0.955-0.004,1.91,0.003,2.865c0.001,0.143,0.028,0.291,0.073,0.426  c0.173,0.508,0.639,0.82,1.209,0.823C41.344,26.579,41.808,26.578,42.271,26.578z M33,27.817c-3.384-0.002-6.135,2.721-6.182,6.089  c-0.049,3.46,2.72,6.201,6.04,6.272c3.454,0.074,6.248-2.686,6.321-6.043C39.254,30.675,36.462,27.815,33,27.817z M21.046,31.116  v0.082c0,4.515-0.001,9.03,0,13.545c0,0.649,0.562,1.208,1.212,1.208c7.16,0.001,14.319,0.001,21.479,0  c0.656,0,1.215-0.557,1.215-1.212c0.001-4.509,0-9.02,0-13.528v-0.094h-2.912c0.411,1.313,0.537,2.651,0.376,4.014  c-0.161,1.363-0.601,2.631-1.316,3.803s-1.644,2.145-2.779,2.918c-2.944,2.006-6.821,2.182-9.946,0.428  c-1.579-0.885-2.819-2.12-3.685-3.713c-1.289-2.373-1.495-4.865-0.739-7.451C22.983,31.116,22.021,31.116,21.046,31.116z   M45.205,49.255c0.159-0.026,0.318-0.049,0.475-0.083c1.246-0.265,2.264-1.304,2.508-2.557c0.025-0.137,0.045-0.273,0.067-0.409  V21.794c-0.021-0.133-0.04-0.268-0.065-0.401c-0.268-1.367-1.396-2.428-2.78-2.618c-0.058-0.007-0.113-0.02-0.17-0.03H20.761  c-0.147,0.027-0.296,0.047-0.441,0.08c-1.352,0.308-2.352,1.396-2.545,2.766c-0.008,0.057-0.02,0.114-0.029,0.171V46.24  c0.028,0.154,0.05,0.311,0.085,0.465c0.299,1.322,1.427,2.347,2.77,2.52c0.064,0.008,0.13,0.021,0.195,0.03H45.205z M33,64  C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /mitmachen/ankreuztest/
+Disallow: /ankreuztest-fragen/
+Disallow: /ankreuztest/bank.json
+Disallow: /mitmachen/ankreuztest/sitzung/
 Sitemap: https://ioaa-austria.at/sitemap.xml

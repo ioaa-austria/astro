@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-us"ZgotmplZ>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Ankreuztest | IOAA–Austria</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.163.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.297335c18c03763b8ef67eba492828488388f58a4d0f0ac285ec08f5e6c3b6b7.css" >
+
+
+
+    
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var desktopQuery = window.matchMedia('(min-width: 60em)');
+
+     
+    var nav = document.querySelector('.site-nav');
+    if (nav) {
+      var toggle = nav.querySelector('.nav-toggle');
+      var menu = nav.querySelector('#site-menu');
+
+      if (toggle && menu) {
+        function closeSubmenus(except) {
+          nav.querySelectorAll('.dropdown.is-open').forEach(function (dropdown) {
+            if (except && dropdown === except) return;
+            dropdown.classList.remove('is-open');
+            var btn = dropdown.querySelector('.dropdown-toggle');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+          });
+        }
+
+        function setOpen(open) {
+          nav.classList.toggle('is-open', open);
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+          if (!open) closeSubmenus();
+        }
+
+        toggle.addEventListener('click', function () {
+          setOpen(!nav.classList.contains('is-open'));
+        });
+
+        nav.querySelectorAll('.dropdown-toggle').forEach(function (btn) {
+          btn.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            if (desktopQuery.matches) return;
+
+            var dropdown = btn.closest('.dropdown');
+            var willOpen = !dropdown.classList.contains('is-open');
+            closeSubmenus(willOpen ? dropdown : null);
+            dropdown.classList.toggle('is-open', willOpen);
+            btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+          });
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape') {
+            if (nav.querySelector('.dropdown.is-open')) {
+              closeSubmenus();
+            } else {
+              setOpen(false);
+            }
+          }
+        });
+
+        document.addEventListener('click', function (event) {
+          if (desktopQuery.matches) return;
+          if (!nav.contains(event.target)) {
+            closeSubmenus();
+            return;
+          }
+          if (!event.target.closest('.dropdown')) {
+            closeSubmenus();
+          }
+        });
+
+        window.addEventListener('resize', function () {
+          if (desktopQuery.matches) {
+            setOpen(false);
+            closeSubmenus();
+          }
+        });
+      }
+    }
+
+     
+    var timelines = document.querySelectorAll('[data-year-timeline]');
+    if (!timelines.length) return;
+
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var search = window.location.search;
+    var host = window.location.hostname;
+    var localPreview = host === 'localhost' || host === '127.0.0.1';
+    
+    
+    var forceMotion =
+      /(?:\?|&)motion=1(?:&|$)/.test(search) ||
+      (localPreview && reduceMotion && !/(?:\?|&)motion=0(?:&|$)/.test(search));
+    var animate = !reduceMotion || forceMotion;
+    if (forceMotion) document.documentElement.classList.add('force-motion');
+
+    var heroButton = document.querySelector('[data-hero-button]');
+    var heroPrompt = document.querySelector('[data-hero-prompt]');
+
+    function show(el) {
+      if (el) el.classList.add('is-visible');
+    }
+
+    function startHeroSequence(timeline) {
+      if (timeline.classList.contains('is-visible')) return;
+
+      if (!animate) {
+        show(heroButton);
+        show(timeline);
+        show(heroPrompt);
+        return;
+      }
+
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          
+          show(heroButton);
+          setTimeout(function () {
+            show(timeline);
+            setTimeout(function () {
+              show(heroPrompt);
+            }, 1400);
+          }, 320);
+        });
+      });
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      timelines.forEach(startHeroSequence);
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        startHeroSequence(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+
+    timelines.forEach(function (timeline) {
+      observer.observe(timeline);
+    });
+  });
+</script>
+
+
+    
+      
+<link rel="shortcut icon" href="/images/IOAA_Austria_Logo_2.svg" type="image/x-icon" />
+
+
+    
+
+    
+
+    <meta property="og:url" content="https://ioaa-austria.at/mitmachen/ankreuztest/sitzung/">
+	<meta property="og:site_name" content="IOAA–Austria">
+	<meta property="og:title" content="Ankreuztest">
+	<meta property="og:locale" content="en_us">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="mitmachen">
+
+	<meta itemprop="name" content="Ankreuztest">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Ankreuztest">
+
+      
+    
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white production">
+
+    
+    <main class="pb7" role="main">
+      
+  
+  
+  
+  <article class="mw7 center ph3 ankreuz ankreuz-sitting">
+    <noscript>
+      <p class="ankreuz-status">Zum Fortsetzen des Tests muss JavaScript aktiv sein.</p>
+    </noscript>
+    <div id="ankreuztest-root"></div>
+    <div id="ankreuztest-config" hidden>{"endpoint":"https://script.google.com/macros/s/AKfycbwiK1HX3bEjj3IHcltycMAHx5ipsr9D8dhWGNQeOJ7twA_33VY6Xsyzvr4BqF_X1iDa/exec","homeURL":"/mitmachen/ankreuztest/","page":"sitting"}</div>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"></script>
+    <script defer src="/js/ankreuztest.js"></script>
+  </article>
+  <style>
+  .ankreuz-status { font-family: Georgia, serif; }
+  .ankreuz-error { color: #9b1c1c; }
+  .ankreuz-timer {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #f4f4f4;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    font-size: 2rem;
+    padding: 0.4rem 0;
+  }
+  .ankreuz-timer.is-late { color: #9b1c1c; }
+  .ankreuz-choice {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+    background: #eee;
+    cursor: pointer;
+  }
+  .ankreuz-choice.is-selected { outline: 2px solid #111; background: #fff; }
+  .ankreuz-choice p { margin: 0; }
+  .ankreuz-stem p { margin-top: 0; }
+  .ankreuz-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .ankreuz-actions button { width: auto; }
+  .ankreuz-actions button,
+  #ankreuz-form button { cursor: pointer; }
+  .ankreuz-actions button:disabled,
+  #ankreuz-form button:disabled { cursor: default; }
+  button.ankreuz-secondary,
+  button.ankreuz-secondary:hover,
+  button.ankreuz-secondary:focus {
+    background-color: #eee;
+    color: #111;
+  }
+  .ankreuz-confirm {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(17, 17, 17, 0.45);
+  }
+  .ankreuz-confirm__box { background: #fff; max-width: 24rem; width: 100%; padding: 1.5rem; }
+  .ankreuz-hist__chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.4rem;
+    min-height: 10rem;
+  }
+  .ankreuz-col { flex: 1; min-width: 0; text-align: center; font-family: Helvetica, Arial, sans-serif; font-size: 0.75rem; overflow-wrap: anywhere; }
+  .ankreuz-bar { background: #111; width: 100%; min-height: 2px; }
+  .ankreuz-check { display: flex; gap: 0.6rem; align-items: flex-start; }
+  .ankreuz-check,
+  .ankreuz-check input { cursor: pointer; }
+  .ankreuz,
+  .ankreuz input,
+  .ankreuz button,
+  .ankreuz-confirm,
+  .ankreuz-confirm * { box-sizing: border-box; }
+  .ankreuz input,
+  .ankreuz button { max-width: 100%; }
+  .ankreuz-copy { overflow-wrap: break-word; text-align: start; }
+  .ankreuz img { max-width: 100%; height: auto; }
+  .ankreuz-stem,
+  .ankreuz-choice div,
+  .ankreuz-check span { min-width: 0; overflow-wrap: break-word; }
+  .katex-display { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+  .ankreuz-sitting { min-height: 100vh; padding-top: 0.75rem; padding-bottom: 2.5rem; }
+  main:has(.ankreuz-sitting) { padding-bottom: 0; }
+  @media (min-width: 40rem) {
+    .ankreuz-copy { text-align: justify; }
+  }
+  @media (max-width: 30rem) {
+    header.cover > .bg-black-60 > .pv6 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+    .ankreuz h1 { font-size: 2.25rem; }
+    .ankreuz-timer { font-size: 1.5rem; letter-spacing: 0.04em; }
+    .ankreuz-actions { flex-direction: column; }
+    .ankreuz-actions button { width: 100%; }
+    .ankreuz-confirm__box { padding: 1.25rem; }
+  }
+</style>
+
+
+    </main>
+    
+  </body>
+</html>
