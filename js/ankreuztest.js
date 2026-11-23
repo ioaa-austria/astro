@@ -45,16 +45,23 @@
         });
         var data = await response.json();
         if (data && data.retry && attempt < 2) {
-          await sleep(400 * (attempt + 1));
+          await sleep(1000 * Math.pow(2, attempt));
           continue;
         }
         return data;
       } catch (error) {
         lastError = error;
-        await sleep(400 * (attempt + 1));
+        await sleep(500 * (attempt + 1));
       }
     }
     throw lastError || new Error("Verbindung fehlgeschlagen");
+  }
+
+  function showNote(text) {
+    var note = document.getElementById("ankreuz-error");
+    if (!note || !text) return;
+    note.hidden = false;
+    note.textContent = text;
   }
 
   function blockHtml(fragment) {
@@ -314,13 +321,13 @@
     var rev = answerRev;
     var answers = sitting.answers;
     try {
-      await post({ action: "save", token: sitting.token, answers: answers, rev: rev });
-    } catch (error) {
-      var note = document.getElementById("ankreuz-error");
-      if (note) {
-        note.hidden = false;
-        note.textContent = "Die letzte Antwort konnte nicht gespeichert werden.";
+      var data = await post({ action: "save", token: sitting.token, answers: answers, rev: rev });
+      if (data && data.done) return showResult(data);
+      if (data && !data.ok) {
+        showNote(data.message || "Die letzte Antwort konnte nicht gespeichert werden.");
       }
+    } catch (error) {
+      showNote((error && error.message) || "Die letzte Antwort konnte nicht gespeichert werden.");
     }
   }
 
@@ -368,16 +375,14 @@
       var data = await post(body);
       if (seq !== navToken || !sitting) return;
       if (data.done) return showResult(data);
-      if (!data.ok) throw new Error(data.message || "Aufgabe nicht verfügbar");
+      if (!data.ok) throw new Error(data.message || "Die Aufgabe konnte nicht geladen werden. Bitte noch einmal versuchen.");
       sitting.index = data.index;
       sitting.question = data.question;
       applyLoaded(data);
       showQuestion();
     } catch (error) {
-      var note = document.getElementById("ankreuz-error");
-      if (note && seq === navToken) {
-        note.hidden = false;
-        note.textContent = "Die Aufgabe konnte nicht geladen werden. Bitte noch einmal versuchen.";
+      if (seq === navToken) {
+        showNote((error && error.message) || "Die Aufgabe konnte nicht geladen werden. Bitte noch einmal versuchen.");
       }
     } finally {
       navigating = false;
@@ -397,13 +402,11 @@
       if (!sitting || !data) return;
       if (data.done) return showResult(data);
       if (seq !== navToken) return;
-      if (!data.ok) throw new Error(data.message || "Aufgabe nicht verfügbar");
+      if (!data.ok) throw new Error(data.message || "Die Aufgabe konnte nicht gespeichert werden. Bitte noch einmal weiter oder zurück.");
       applyLoaded(data);
-    }).catch(function () {
-      var note = document.getElementById("ankreuz-error");
-      if (note && seq === navToken) {
-        note.hidden = false;
-        note.textContent = "Die Aufgabe konnte nicht gespeichert werden. Bitte noch einmal weiter oder zurück.";
+    }).catch(function (error) {
+      if (seq === navToken) {
+        showNote((error && error.message) || "Die Aufgabe konnte nicht gespeichert werden. Bitte noch einmal weiter oder zurück.");
       }
     });
   }
@@ -415,15 +418,11 @@
     if (saveTimer) clearTimeout(saveTimer);
     try {
       var data = await post({ action: "submit", token: sitting.token, answers: sitting.answers });
-      if (!data.ok) throw new Error(data.message || "Abgabe fehlgeschlagen");
+      if (!data.ok) throw new Error(data.message || "Die Abgabe ist fehlgeschlagen. Bitte noch einmal versuchen.");
       showResult(data);
     } catch (error) {
       finishing = false;
-      var note = document.getElementById("ankreuz-error");
-      if (note) {
-        note.hidden = false;
-        note.textContent = "Die Abgabe ist fehlgeschlagen. Bitte noch einmal versuchen.";
-      }
+      showNote((error && error.message) || "Die Abgabe ist fehlgeschlagen. Bitte noch einmal versuchen.");
       if (remainingMs() > 0) clockTimer = setInterval(tick, 250);
     }
   }
